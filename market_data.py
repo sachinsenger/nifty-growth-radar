@@ -1,5 +1,8 @@
 from datetime import datetime, timedelta
+import time
 import pandas as pd
+
+_OPENCHART = None
 
 
 def normalize(df):
@@ -23,10 +26,12 @@ def normalize(df):
 
 
 def fetch_openchart(symbol, start, end):
+    global _OPENCHART
     from openchart import NSEData
-    n = NSEData()
-    n.download()
-    return n.historical(symbol, 'NSE', start, end, '1d')
+    if _OPENCHART is None:
+        _OPENCHART = NSEData()
+        _OPENCHART.download()
+    return _OPENCHART.historical(symbol, 'NSE', start, end, '1d')
 
 
 def fetch_jugaad(symbol, start, end):
@@ -39,11 +44,15 @@ def fetch(symbol, days=400):
     start = end - timedelta(days=days)
     errors = []
     for name, fn in [('openchart', fetch_openchart), ('jugaad', fetch_jugaad)]:
-        try:
-            df = normalize(fn(symbol, start, end))
-            if len(df) >= 220:
-                return df, name
-            errors.append(f'{name}: {len(df)} rows')
-        except Exception as e:
-            errors.append(f'{name}: {type(e).__name__}: {e}')
+        for attempt in range(2):
+            try:
+                df = normalize(fn(symbol, start, end))
+                if len(df) >= 220:
+                    time.sleep(0.5)
+                    return df, name
+                errors.append(f'{name}: {len(df)} rows')
+                break
+            except Exception as e:
+                errors.append(f'{name} attempt {attempt + 1}: {type(e).__name__}: {e}')
+                time.sleep(2 ** attempt)
     raise RuntimeError(' | '.join(errors))
