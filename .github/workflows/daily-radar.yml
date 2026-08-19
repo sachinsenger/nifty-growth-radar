@@ -20,7 +20,7 @@ jobs:
   build:
     if: github.actor != 'github-actions[bot]'
     runs-on: ubuntu-latest
-    timeout-minutes: 30
+    timeout-minutes: 45
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
@@ -40,6 +40,10 @@ jobs:
         run: python -c "import pandas, numpy, requests, bs4, openchart, jugaad_data, jinja2; print('All imports OK')"
       - name: Generate dashboard
         run: python run_daily.py
+      - name: Apply quality and risk layer
+        run: python quality_report.py
+      - name: Run technical historical research
+        run: python backtest_report.py
       - name: Archive dated dashboard
         run: |
           DATE_IST=$(TZ=Asia/Kolkata date +%Y-%m-%d)
@@ -49,15 +53,14 @@ jobs:
         if: always()
         run: |
           test -f docs/index.html && echo 'HTML generated: docs/index.html' || echo 'HTML NOT generated'
-          test -f docs/failures.csv && echo 'Failure report generated: docs/failures.csv' || true
-          ls -lh docs/index.html docs/*.html 2>/dev/null || true
-          wc -c docs/index.html 2>/dev/null || true
-      - name: Commit generated dashboards
+          test -f docs/backtest-latest.json && echo 'Backtest generated' || true
+          ls -lh docs/index.html docs/*.html docs/*.json 2>/dev/null || true
+      - name: Commit generated dashboards and research data
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add docs/index.html docs/*.html docs/failures.csv
-          git diff --cached --quiet || git commit -m "Update daily radar and archive dated dashboard"
+          git add docs/index.html docs/*.html docs/*.json docs/*.csv
+          git diff --cached --quiet || git commit -m "Update daily radar, quality layer and research snapshots"
           git push
       - name: Upload dashboard artifact
         uses: actions/upload-artifact@v4
