@@ -44,6 +44,8 @@ jobs:
         run: python quality_report.py
       - name: Run technical historical research
         run: python backtest_report.py
+      - name: Generate daily global and Indian market news
+        run: python news_feed.py
       - name: Archive dated dashboard
         run: |
           DATE_IST=$(TZ=Asia/Kolkata date +%Y-%m-%d)
@@ -53,14 +55,15 @@ jobs:
         if: always()
         run: |
           test -f docs/index.html && echo 'HTML generated: docs/index.html' || echo 'HTML NOT generated'
+          test -f docs/news.html && echo 'News generated: docs/news.html' || echo 'News NOT generated'
           test -f docs/backtest-latest.json && echo 'Backtest generated' || true
-          ls -lh docs/index.html docs/*.html docs/*.json 2>/dev/null || true
+          ls -lh docs/index.html docs/news.html docs/*.html docs/*.json 2>/dev/null || true
       - name: Commit generated dashboards and research data
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add docs/index.html docs/*.html docs/*.json docs/*.csv
-          git diff --cached --quiet || git commit -m "Update daily radar, quality layer and research snapshots"
+          git add docs/index.html docs/news.html docs/*.html docs/*.json docs/*.csv
+          git diff --cached --quiet || git commit -m "Update daily radar, market news and research snapshots"
           git push
       - name: Upload dashboard artifact
         uses: actions/upload-artifact@v4
