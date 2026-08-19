@@ -40,19 +40,24 @@ jobs:
         run: python -c "import pandas, numpy, requests, bs4, openchart, jugaad_data, jinja2; print('All imports OK')"
       - name: Generate dashboard
         run: python run_daily.py
+      - name: Archive dated dashboard
+        run: |
+          DATE_IST=$(TZ=Asia/Kolkata date +%Y-%m-%d)
+          cp docs/index.html "docs/${DATE_IST}.html"
+          echo "Archived dashboard: docs/${DATE_IST}.html"
       - name: Show generation summary
         if: always()
         run: |
           test -f docs/index.html && echo 'HTML generated: docs/index.html' || echo 'HTML NOT generated'
           test -f docs/failures.csv && echo 'Failure report generated: docs/failures.csv' || true
+          ls -lh docs/index.html docs/*.html 2>/dev/null || true
           wc -c docs/index.html 2>/dev/null || true
-          wc -l docs/failures.csv 2>/dev/null || true
-      - name: Commit generated dashboard
+      - name: Commit generated dashboards
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add docs/index.html docs/failures.csv
-          git diff --cached --quiet || git commit -m 'Update daily radar'
+          git add docs/index.html docs/*.html docs/failures.csv
+          git diff --cached --quiet || git commit -m "Update daily radar and archive dated dashboard"
           git push
       - name: Upload dashboard artifact
         uses: actions/upload-artifact@v4
