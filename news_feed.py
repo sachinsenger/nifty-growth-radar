@@ -1,43 +1,23 @@
 """Daily market-news intelligence layer.
-Uses public Google News RSS search feeds (no paid API key). It does not fabricate prices or facts; it classifies articles into likely sectors/stocks and impact themes for research.
+Uses public Google News RSS feeds (no paid API). Produces research-oriented News -> Sector -> Stock -> Impact mapping.
 """
-import html, re, urllib.parse, urllib.request, xml.etree.ElementTree as ET
+import html, re, urllib.parse, urllib.request, xml.etree.ElementTree as ET, json
 from datetime import datetime, timezone
 from pathlib import Path
-
 ROOT=Path(__file__).parent; OUT=ROOT/'docs'; OUT.mkdir(exist_ok=True)
 QUERIES=[
- ('India markets','Nifty OR Sensex OR Indian stocks OR NSE India'),
- ('RBI / rates / inflation','RBI India repo rate inflation rupee markets'),
- ('Crude / geopolitics','India crude oil Brent Strait Hormuz Middle East markets'),
- ('India policy / budget','India government policy tariffs capex infrastructure stocks'),
- ('IT / AI','Indian IT stocks AI technology spending TCS Infosys HCLTech Wipro'),
- ('Banks / NBFC','India banks NBFC credit growth RBI financial stocks'),
- ('Pharma / healthcare','India pharma healthcare stocks USFDA drug pricing'),
- ('Auto','India auto stocks EV tariffs vehicle sales'),
- ('Defence / industrials','India defence industrial capital goods stocks orders'),
- ('Metals / mining','India metals steel aluminium mining stocks China commodity'),
- ('Energy / utilities','India energy power gas oil stocks ONGC Reliance NTPC'),
- ('Global markets','US stocks Fed Treasury yields China Japan Europe markets'),
- ('AI / semiconductors','AI semiconductors Nvidia chip stocks global markets'),
-]
-STOCK_KEYS={
- 'RELIANCE':['reliance','jio'], 'TCS':['tcs','tata consultancy'], 'INFY':['infosys'], 'HCLTECH':['hcltech','hcl technologies'], 'WIPRO':['wipro'],
- 'HDFCBANK':['hdfc bank'], 'ICICIBANK':['icici bank'], 'SBIN':['sbi','state bank of india'], 'AXISBANK':['axis bank'], 'KOTAKBANK':['kotak bank'],
- 'BAJFINANCE':['bajaj finance'], 'M&M':['mahindra','mahindra & mahindra'], 'MARUTI':['maruti suzuki'], 'TITAN':['titan company'],
- 'SUNPHARMA':['sun pharma','sun pharmaceutical'], 'MARKSANS':['marksans pharma'], 'MAXHEALTH':['max healthcare'], 'KIMS':['kims hospital'],
- 'LT':['larsen','l&t','larsen & toubro'], 'MAZDOCK':['mazagon dock'], 'SOLARINDS':['solar industries'], 'DATAPATTNS':['data patterns'],
- 'NTPC':['ntpc'], 'ONGC':['ongc'], 'BPCL':['bpcl'], 'BHARTIARTL':['bharti airtel','airtel'], 'POLYCAB':['polycab'], 'DIXON':['dixon technologies'],
- 'COFORGE':['coforge'], 'PERSISTENT':['persistent systems'], 'BSE':['bse ltd'], 'CDSL':['cdsl'], 'DELHIVERY':['delhivery'],
-}
-SECTOR_KEYS={
- 'Financials':['bank','banks','nbfc','lending','credit','rbi','insurance','fintech'], 'IT':['software','it services','technology','ai','artificial intelligence','cloud','cybersecurity','semiconductor'],
- 'Pharma':['pharma','pharmaceutical','drug','fda','usfda','healthcare','biotech'], 'Auto':['auto','automobile','ev','electric vehicle','vehicle sales','cars','two-wheeler'],
- 'Defence':['defence','defense','missile','drone','navy','army','aerospace'], 'Industrials':['capital goods','infrastructure','order win','railway','engineering','manufacturing'],
- 'Energy':['crude','oil','gas','power','electricity','lng','renewable'], 'Metals':['steel','aluminium','copper','metal','mining','iron ore'],
- 'Telecom':['telecom','5g','spectrum','airtel'], 'FMCG':['fmcg','consumer','rural demand','food inflation'], 'Chemicals':['chemical','specialty chemicals'],
-}
-
+ ('India markets','Nifty OR Sensex OR Indian stocks OR NSE India'),('RBI rates inflation','RBI India repo rate inflation rupee markets'),
+ ('Crude geopolitics','India crude oil Brent Strait Hormuz Middle East markets'),('India policy','India government policy tariffs capex infrastructure stocks'),
+ ('IT AI','Indian IT stocks AI technology spending TCS Infosys HCLTech Wipro'),('Banks NBFC','India banks NBFC credit growth RBI financial stocks'),
+ ('Pharma healthcare','India pharma healthcare stocks USFDA drug pricing'),('Auto','India auto stocks EV tariffs vehicle sales'),
+ ('Defence industrials','India defence industrial capital goods stocks orders'),('Metals mining','India metals steel aluminium mining stocks China commodity'),
+ ('Energy utilities','India energy power gas oil stocks ONGC Reliance NTPC'),('Global markets','US stocks Fed Treasury yields China Japan Europe markets'),
+ ('AI semiconductors','AI semiconductors Nvidia chip stocks global markets')]
+STOCK_KEYS={'RELIANCE':['reliance','jio'],'TCS':['tcs','tata consultancy'],'INFY':['infosys'],'HCLTECH':['hcltech','hcl technologies'],'WIPRO':['wipro'],'HDFCBANK':['hdfc bank'],'ICICIBANK':['icici bank'],'SBIN':['sbi','state bank of india'],'AXISBANK':['axis bank'],'KOTAKBANK':['kotak bank'],'BAJFINANCE':['bajaj finance'],'M&M':['mahindra','mahindra & mahindra'],'MARUTI':['maruti suzuki'],'TITAN':['titan company'],'SUNPHARMA':['sun pharma','sun pharmaceutical'],'MARKSANS':['marksans pharma'],'MAXHEALTH':['max healthcare'],'KIMS':['kims hospital'],'LT':['larsen','l&t','larsen & toubro'],'MAZDOCK':['mazagon dock'],'SOLARINDS':['solar industries'],'DATAPATTNS':['data patterns'],'NTPC':['ntpc'],'ONGC':['ongc'],'BPCL':['bpcl'],'BHARTIARTL':['bharti airtel','airtel'],'POLYCAB':['polycab'],'DIXON':['dixon technologies'],'COFORGE':['coforge'],'PERSISTENT':['persistent systems'],'BSE':['bse ltd'],'CDSL':['cdsl'],'DELHIVERY':['delhivery']}
+SECTOR_KEYS={'Financials':['bank','banks','nbfc','lending','credit','rbi','insurance','fintech'],'IT':['software','it services','technology','ai','artificial intelligence','cloud','cybersecurity','semiconductor'],'Pharma':['pharma','pharmaceutical','drug','fda','usfda','healthcare','biotech'],'Auto':['auto','automobile','ev','electric vehicle','vehicle sales','cars','two-wheeler'],'Defence':['defence','defense','missile','drone','navy','army','aerospace'],'Industrials':['capital goods','infrastructure','order win','railway','engineering','manufacturing'],'Energy':['crude','oil','gas','power','electricity','lng','renewable'],'Metals':['steel','aluminium','copper','metal','mining','iron ore'],'Telecom':['telecom','5g','spectrum','airtel'],'FMCG':['fmcg','consumer','rural demand','food inflation'],'Chemicals':['chemical','specialty chemicals']}
+POS=['upgrade','beat','strong','surge','growth','approval','order win','capex','inflow','easing','buyback','dividend','deal','rebound','cut rate','contract']
+NEG=['downgrade','miss','fall','drop','inflation','tariff','war','sanction','hawkish','rate hike','selloff','weak','cut guidance','fraud','higher crude','yield rises']
+MACRO=['crude','brent','rbi','repo','treasury yield','fed','tariff','war','hormuz','inflation','rupee','usd/inr','fii','dii']
 def fetch_feed(label,q):
     url='https://news.google.com/rss/search?'+urllib.parse.urlencode({'q':q+' when:1d','hl':'en-IN','gl':'IN','ceid':'IN:en'})
     req=urllib.request.Request(url,headers={'User-Agent':'Mozilla/5.0 NiftyGrowthRadar/1.0'})
@@ -47,45 +27,39 @@ def fetch_feed(label,q):
         title=item.findtext('title','').strip(); link=item.findtext('link','').strip(); desc=re.sub('<.*?>',' ',item.findtext('description','') or '').strip(); pub=item.findtext('pubDate','').strip(); source=item.findtext('source','').strip()
         if title: out.append({'query':label,'title':title,'link':link,'description':re.sub(r'\s+',' ',desc)[:500],'published':pub,'source':source})
     return out
-
 def classify(a):
-    text=(a['title']+' '+a['description']).lower(); stocks=[s for s,keys in STOCK_KEYS.items() if any(k in text for k in keys)][:5]; sectors=[s for s,keys in SECTOR_KEYS.items() if any(k in text for k in keys)][:4]
-    if not sectors: sectors=[a['query']]
-    positive=['upgrade','beat','strong','surge','growth','approval','order win','capex','inflow','easing','buyback','dividend','deal','rebound','cut rate']
-    negative=['downgrade','miss','fall','drop','surge in crude','inflation','tariff','war','sanction','hawkish','rate hike','selloff','weak','cut guidance','fraud']
-    p=sum(x in text for x in positive); n=sum(x in text for x in negative); tone='Positive' if p>n else 'Negative' if n>p else 'Mixed/Neutral'
-    impact='High' if len(stocks)>=1 or any(x in text for x in ['rbi','fed','crude oil','brent','treasury yield','tariff','war','hormuz']) else 'Medium'
+    text=(a['title']+' '+a['description']).lower(); stocks=[s for s,keys in STOCK_KEYS.items() if any(k in text for k in keys)][:5]; sectors=[s for s,keys in SECTOR_KEYS.items() if any(k in text for k in keys)][:4] or [a['query']]
+    p=sum(x in text for x in POS); n=sum(x in text for x in NEG); tone='Positive' if p>n else 'Negative' if n>p else 'Mixed/Neutral'
+    impact='High' if stocks or any(x in text for x in MACRO) else 'Medium'
+    if 'crude' in text or 'brent' in text: affected=['Oil & Gas','Airlines','Paints','Chemicals','Tyres']
+    elif 'treasury yield' in text or 'fed' in text: affected=['Financials','IT','High-growth/valuations']
+    elif 'tariff' in text: affected=['Auto','IT','Pharma','Metals','Chemicals']
+    else: affected=sectors
     watch=stocks if stocks else sectors
-    return {**a,'stocks':stocks,'sectors':sectors,'tone':tone,'impact':impact,'watch':watch}
-
+    return {**a,'stocks':stocks,'sectors':sectors,'affected':affected,'tone':tone,'impact':impact,'watch':watch,'macro':any(x in text for x in MACRO)}
 def build():
     all_items=[]
     for label,q in QUERIES:
         try: all_items += fetch_feed(label,q)
-        except Exception: continue
+        except Exception: pass
     seen=set(); items=[]
     for a in all_items:
         key=re.sub(r'\W','',a['title'].lower())
         if key in seen: continue
         seen.add(key); items.append(classify(a))
-    rank={'High':3,'Medium':2,'Low':1}; items.sort(key=lambda a:(rank.get(a['impact'],1), 1 if a['tone']=='Negative' else 0),reverse=True); items=items[:30]
-    date=datetime.now(timezone.utc).strftime('%Y-%m-%d')
-    high=[a for a in items if a['impact']=='High']
-    sector_counts={}
+    rank={'High':3,'Medium':2,'Low':1}; items.sort(key=lambda a:(rank.get(a['impact'],1),a['macro'],1 if a['tone']=='Negative' else 0),reverse=True); items=items[:30]
+    date=datetime.now(timezone.utc).strftime('%Y-%m-%d'); high=[a for a in items if a['impact']=='High']; sector_counts={}
     for a in items:
         for s in a['sectors']: sector_counts[s]=sector_counts.get(s,0)+1
-    sectors=sorted(sector_counts.items(),key=lambda x:x[1],reverse=True)[:8]
-    macro=[]
-    for a in items:
-        if any(k in (a['title']+' '+a['description']).lower() for k in ['crude','brent','rbi','repo','treasury yield','fed','tariff','hormuz','inflation','rupee']): macro.append(a)
+    sectors=sorted(sector_counts.items(),key=lambda x:x[1],reverse=True)[:10]; macro=[a for a in items if a['macro']]
     cards=[]
     for a in items[:20]:
-        c='neg' if a['tone']=='Negative' else 'pos' if a['tone']=='Positive' else 'mix'; watch=', '.join(a['watch'][:5]); src=html.escape(a['source'] or 'Google News')
-        cards.append(f'<article class="news {c}"><div><span class="badge">{a["impact"]} impact</span> <span class="badge">{html.escape(a["tone"])}</span></div><h3><a href="{html.escape(a["link"])}" target="_blank" rel="noopener">{html.escape(a["title"])}</a></h3><p>{html.escape(a["description"])}</p><small>{src} • {html.escape(a["published"])} </small><p><b>Sector:</b> {html.escape(", ".join(a["sectors"]))}<br><b>Stocks to watch:</b> {html.escape(watch or "Sector-level only")}</p></article>')
+        c='neg' if a['tone']=='Negative' else 'pos' if a['tone']=='Positive' else 'mix'; watch=', '.join(a['watch'][:5]) or 'Sector-level only'
+        impact_text='Potential downside pressure' if a['tone']=='Negative' else 'Potential tailwind' if a['tone']=='Positive' else 'Potentially mixed'
+        cards.append(f'<article class="news {c}"><span class="badge">{a["impact"]} impact</span> <span class="badge">{html.escape(a["tone"])}</span><h3><a href="{html.escape(a["link"])}" target="_blank" rel="noopener">{html.escape(a["title"])}</a></h3><p>{html.escape(a["description"])}</p><small>{html.escape(a["source"] or "Google News")} • {html.escape(a["published"])}</small><p><b>Affected sector:</b> {html.escape(", ".join(a["affected"]))}<br><b>Stocks to watch:</b> {html.escape(watch)}<br><b>Possible impact:</b> {impact_text}. Validate against price, volume, relative strength and fundamentals before acting.</p></article>')
     sector_html=''.join(f'<span class="sector">{html.escape(s)} <b>{n}</b></span>' for s,n in sectors)
-    macro_html=''.join(f'<li><b>{html.escape(a["title"])}</b> — {html.escape(a["tone"])}; watch {html.escape(", ".join(a["watch"]))}</li>' for a in macro[:8]) or '<li>No major macro item detected from the public feeds.</li>'
-    page=f'''<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Market News Intelligence {date}</title><style>body{{font-family:system-ui;margin:0;background:#f3f6fa;color:#172033}}header{{background:#17365d;color:#fff;padding:22px}}main{{max-width:1200px;margin:auto;padding:14px}}.news{{background:#fff;border-radius:14px;padding:15px;margin:12px 0;box-shadow:0 2px 8px #0001;border-left:5px solid #98a2b3}}.news.neg{{border-left-color:#d92d20}}.news.pos{{border-left-color:#12b76a}}.news.mix{{border-left-color:#f79009}}a{{color:#175cd3;text-decoration:none}}.badge,.sector{{display:inline-block;background:#eef2f6;border-radius:99px;padding:4px 8px;font-size:11px;margin:2px}}.sector b{{font-size:12px}}small,p{{color:#667085;font-size:12px}}.panel{{background:#fff;border-radius:14px;padding:15px;margin:12px 0}}</style></head><body><header><h1>📰 Market News Intelligence</h1><div>{date} • Global + India • last 24 hours</div></header><main><div class="panel"><h2>What could move markets?</h2><ul>{macro_html}</ul></div><div class="panel"><h2>Most discussed sectors</h2>{sector_html}</div><h2>Top news → sector → stocks → possible impact</h2>{''.join(cards)}<div class="panel"><p><b>Method:</b> public RSS news discovery, duplicate removal and rule-based sector/stock mapping. Impact is a research flag, not a prediction. Always open the source before trading.</p></div></main></body></html>'''
-    (OUT/'news.html').write_text(page,encoding='utf-8'); (OUT/f'news-{date}.html').write_text(page,encoding='utf-8')
-    return {'date':date,'items':items,'high_impact':high,'sectors':sectors}
-if __name__=='__main__':
-    x=build(); print('News generated:',x['date'],'items=',len(x['items']))
+    macro_html=''.join(f'<li><b>{html.escape(a["title"])}</b> — {html.escape(a["tone"])}; watch {html.escape(", ".join(a["watch"]) or ", ".join(a["sectors"]))}</li>' for a in macro[:8]) or '<li>No major macro item detected from the public feeds.</li>'
+    page=f'''<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Market News Intelligence {date}</title><style>body{{font-family:system-ui;margin:0;background:#f3f6fa;color:#172033}}header{{background:#17365d;color:#fff;padding:22px}}main{{max-width:1200px;margin:auto;padding:14px}}.news{{background:#fff;border-radius:14px;padding:15px;margin:12px 0;box-shadow:0 2px 8px #0001;border-left:5px solid #98a2b3}}.news.neg{{border-left-color:#d92d20}}.news.pos{{border-left-color:#12b76a}}.news.mix{{border-left-color:#f79009}}a{{color:#175cd3;text-decoration:none}}.badge,.sector{{display:inline-block;background:#eef2f6;border-radius:99px;padding:4px 8px;font-size:11px;margin:2px}}.sector b{{font-size:12px}}small,p{{color:#667085;font-size:12px}}.panel{{background:#fff;border-radius:14px;padding:15px;margin:12px 0}}</style></head><body><header><h1>📰 Market News Intelligence</h1><div>{date} • Global + India • previous 24 hours</div></header><main><div class="panel"><h2>🧠 News → Sector → Stock → Impact</h2><p>High-priority stories are ranked using freshness, macro relevance and stock/sector matches. Impact is a research flag, not a trading guarantee.</p></div><div class="panel"><h2>🚨 Macro risks / catalysts</h2><ul>{macro_html}</ul></div><div class="panel"><h2>📊 Sector attention map</h2>{sector_html}</div><h2>📰 Top market-moving stories</h2>{''.join(cards)}<div class="panel"><h3>Trading discipline</h3><p>News alone never triggers BUY. Require technical confirmation: trend, relative strength, volume, structure and risk/reward. Confirm financial data and the original source before trading.</p></div></main></body></html>'''
+    (OUT/'news.html').write_text(page,encoding='utf-8'); (OUT/f'news-{date}.html').write_text(page,encoding='utf-8'); (OUT/f'news-{date}.json').write_text(json.dumps({'date':date,'items':items,'high_impact':high,'sectors':sectors},indent=2),encoding='utf-8')
+    return {'date':date,'items':len(items),'high_impact':len(high),'sectors':sectors}
+if __name__=='__main__': print('News generated:',build())
