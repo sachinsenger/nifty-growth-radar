@@ -4,7 +4,9 @@ on:
   push:
     branches: [main]
   schedule:
-    - cron: '30 10 * * 1-5' # 16:00 IST
+    - cron: '0 3 * * 1-5'    # 08:30 IST
+    - cron: '30 5 * * 1-5'   # 11:00 IST
+    - cron: '0 8 * * 1-5'    # 13:30 IST
   workflow_dispatch:
 
 permissions:
@@ -13,8 +15,8 @@ permissions:
   id-token: write
 
 concurrency:
-  group: nifty-growth-radar
-  cancel-in-progress: true
+  group: nifty-growth-radar-${{ github.event.schedule || github.run_id }}
+  cancel-in-progress: false
 
 jobs:
   build:
@@ -48,11 +50,13 @@ jobs:
         run: python news_feed.py
       - name: Integrate news link into dashboard
         run: python integrate_news.py
-      - name: Archive dated dashboard
+      - name: Archive timestamped dashboard and news
         run: |
-          DATE_IST=$(TZ=Asia/Kolkata date +%Y-%m-%d)
-          cp docs/index.html "docs/${DATE_IST}.html"
-          echo "Archived dashboard: docs/${DATE_IST}.html"
+          STAMP_IST=$(TZ=Asia/Kolkata date +%Y-%m-%d-%H-%M)
+          cp docs/index.html "docs/${STAMP_IST}.html"
+          if [ -f docs/news.html ]; then cp docs/news.html "docs/news-${STAMP_IST}.html"; fi
+          echo "Archived dashboard: docs/${STAMP_IST}.html"
+          echo "Archived news: docs/news-${STAMP_IST}.html"
       - name: Show generation summary
         if: always()
         run: |
@@ -70,7 +74,7 @@ jobs:
       - name: Upload dashboard artifact
         uses: actions/upload-artifact@v4
         with:
-          name: nifty-growth-radar-html
+          name: nifty-growth-radar-html-${{ github.run_id }}
           path: docs/
           if-no-files-found: error
           retention-days: 14
