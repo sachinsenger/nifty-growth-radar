@@ -46,6 +46,8 @@ jobs:
         run: python backtest_report.py
       - name: Generate daily global and Indian market news
         run: python news_feed.py
+      - name: Integrate news link into dashboard
+        run: python integrate_news.py
       - name: Archive dated dashboard
         run: |
           DATE_IST=$(TZ=Asia/Kolkata date +%Y-%m-%d)
