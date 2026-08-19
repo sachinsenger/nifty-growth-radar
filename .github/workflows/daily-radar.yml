@@ -1,5 +1,8 @@
 name: Daily Nifty Growth Radar
 on:
+  push:
+    paths:
+      - '.github/trigger.txt'
   schedule:
     - cron: '30 2 * * 1-5'
   workflow_dispatch:
