@@ -1,0 +1,47 @@
+name: Repair radar source
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  repair:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Repair run_daily.py syntax
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          p = Path('run_daily.py')
+          s = p.read_text(encoding='utf-8')
+          old = "html.escape('; '.join("
+          new = 'html.escape("; ".join('
+          changed = old in s
+          if changed:
+              s = s.replace(old, new)
+              p.write_text(s, encoding='utf-8')
+              print('Repaired f-string quoting in run_daily.py')
+          else:
+              print('No syntax repair needed')
+          compile(s, 'run_daily.py', 'exec')
+          print('run_daily.py syntax validation: OK')
+          PY
+
+      - name: Commit repair if needed
+        run: |
+          if git diff --quiet -- run_daily.py; then
+            echo 'No changes to commit'
+            exit 0
+          fi
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add run_daily.py
+          git commit -m 'Fix radar HTML f-string quoting'
+          git push
