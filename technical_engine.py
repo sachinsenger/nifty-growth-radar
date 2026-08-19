@@ -26,10 +26,11 @@ def calculate(df):
     df['ATR14']=atr(df); df['ATRpct']=100*df.ATR14/c; df['ADX14']=adx(df)
     mid=c.rolling(20).mean(); sd=c.rolling(20).std(); df['BBUpper']=mid+2*sd; df['BBLower']=mid-2*sd; df['BBPos']=(c-df.BBLower)/(df.BBUpper-df.BBLower)
     df['Vol20']=v.rolling(20).mean(); df['VolRatio']=v/df.Vol20; df['High52']=h.rolling(252).max(); df['Low52']=l.rolling(252).min()
-    df['Dist52HighPct']=100*(c/df.High52-1); df['Dist52LowPct']=100*(c/df.Low52-1)
+    df['High20']=h.rolling(20).max().shift(1); df['High50']=h.rolling(50).max().shift(1)
     for n in (1,5,21,63,126,252): df[f'Ret{n}D']=c.pct_change(n)*100
     x=df.iloc[-1]; r=float(x.RSI14)
-    rs='Oversold' if r<30 else 'Weak' if r<40 else 'Neutral' if r<60 else 'Strong' if r<70 else 'Overbought'
+    rs='Oversold' if r<30 else 'Weak' if r<40 else 'Neutral' if r<55 else 'Strong' if r<70 else 'Overbought'
     trend='Bullish alignment' if x.Close>x.EMA20>x.EMA50>x.EMA200 else 'Improving' if x.Close>x.EMA50>x.EMA200 else 'Bearish alignment' if x.Close<x.EMA20<x.EMA50<x.EMA200 else 'Mixed'
     w52='Near 52W high' if x.Close>=.98*x.High52 else 'Near 52W low' if x.Close<=1.02*x.Low52 else 'Middle range'
-    return {'date':str(df.index[-1].date()),'close':float(x.Close),'rsi':r,'rsi_status':rs,'ema20':float(x.EMA20),'ema50':float(x.EMA50),'ema200':float(x.EMA200),'trend':trend,'macd_hist':float(x.MACDHist),'macd_status':'Bullish' if x.MACD>x.MACDSignal else 'Bearish','atr':float(x.ATR14),'atr_pct':float(x.ATRpct),'adx':float(x.ADX14),'vol_ratio':float(x.VolRatio),'high52':float(x.High52),'low52':float(x.Low52),'dist_high':float(x.Dist52HighPct),'dist_low':float(x.Dist52LowPct),'w52':w52,'ret1d':float(x.Ret1D),'ret1w':float(x.Ret5D),'ret1m':float(x.Ret21D),'ret3m':float(x.Ret63D),'ret6m':float(x.Ret126D),'ret1y':float(x.Ret252D),'support':float(df.Low.tail(20).min()),'resistance':float(df.High.tail(20).max())}
+    adx_now=float(x.ADX14); adx_prev=float(df.iloc[-6].ADX14) if len(df)>=6 else adx_now
+    return {'date':str(df.index[-1].date()),'close':float(x.Close),'rsi':r,'rsi_status':rs,'ema20':float(x.EMA20),'ema50':float(x.EMA50),'ema200':float(x.EMA200),'trend':trend,'macd_hist':float(x.MACDHist),'macd_status':'Bullish' if x.MACD>x.MACDSignal else 'Bearish','macd_hist_rising':bool(x.MACDHist>df.iloc[-2].MACDHist),'atr':float(x.ATR14),'atr_pct':float(x.ATRpct),'adx':adx_now,'adx_rising':adx_now>adx_prev,'vol_ratio':float(x.VolRatio),'high52':float(x.High52),'low52':float(x.Low52),'high20':float(x.High20),'high50':float(x.High50),'dist_high':float(x.Close/x.High52*100-100),'dist_low':float(x.Close/x.Low52*100-100),'w52':w52,'ret1d':float(x.Ret1D),'ret1w':float(x.Ret5D),'ret1m':float(x.Ret21D),'ret3m':float(x.Ret63D),'ret6m':float(x.Ret126D),'ret1y':float(x.Ret252D),'support':float(df.Low.tail(20).min()),'resistance':float(df.High.tail(20).max()),'breakout20':bool(x.Close>x.High20),'breakout50':bool(x.Close>x.High50)}
