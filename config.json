@@ -1,0 +1,1 @@
+{"lookback_days":400,"technical_interval":"1d","output_dir":"output","request_pause_seconds":1.2,"market_source_order":["openchart","jugaad"],"scoring":{"market_regime":10,"sector_strength":15,"relative_strength":15,"trend_ema":10,"rsi_macd":5,"structure":10,"volume":5,"breakout_52w":5,"valuation":5,"earnings_growth":10,"balance_sheet":5,"cash_flow":5}}
