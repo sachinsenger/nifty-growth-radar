@@ -1,34 +1,54 @@
 name: Daily Nifty Growth Radar
+
 on:
+  push:
+    branches: [main]
   schedule:
-    - cron: '30 2 * * 1-5'
+    - cron: '30 2 * * 1-5' # 08:00 IST
   workflow_dispatch:
+
 permissions:
   contents: write
   pages: write
   id-token: write
+
 concurrency:
   group: nifty-growth-radar
   cancel-in-progress: false
+
 jobs:
   build:
     runs-on: ubuntu-latest
     timeout-minutes: 30
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+
       - name: Setup Python
         uses: actions/setup-python@v5
         with:
           python-version: '3.11'
           cache: pip
+
       - name: Install dependencies
-        run: python -m pip install --upgrade pip && python -m pip install -r requirements.txt
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install -r requirements.txt
+
+      - name: Validate pipeline imports
+        run: python -c "import pandas, numpy, requests, bs4, openchart, jugaad_data, jinja2; print('All imports OK')"
+
       - name: Generate dashboard
         run: python run_daily.py
+
+      - name: Show generation summary
+        if: always()
+        run: |
+          test -f docs/index.html && echo 'HTML generated: docs/index.html' || echo 'HTML NOT generated'
+          test -f docs/failures.csv && echo 'Failure report generated: docs/failures.csv' || true
+          wc -c docs/index.html 2>/dev/null || true
+          wc -l docs/failures.csv 2>/dev/null || true
+
       - name: Commit generated dashboard
         run: |
           git config user.name 'github-actions[bot]'
@@ -36,12 +56,31 @@ jobs:
           git add docs/index.html docs/failures.csv
           git diff --cached --quiet || git commit -m 'Update daily radar'
           git push
+
+      - name: Upload dashboard artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: nifty-growth-radar-html
+          path: docs/
+          if-no-files-found: error
+          retention-days: 14
+
+      # GitHub Pages must be enabled in repository Settings > Pages > Source = GitHub Actions.
+      # Keep Pages non-blocking so a Pages setting cannot make the data pipeline fail.
       - name: Configure Pages
+        id: pages
+        continue-on-error: true
         uses: actions/configure-pages@v5
+
       - name: Upload Pages artifact
-        uses: actions/upload-pages-artifact@v3
+        if: steps.pages.outcome == 'success'
+        continue-on-error: true
+        uses: actions/upload-pages-artifact@v4
         with:
           path: './docs'
+
       - name: Deploy Pages
+        if: steps.pages.outcome == 'success'
+        continue-on-error: true
         id: deployment
         uses: actions/deploy-pages@v4
