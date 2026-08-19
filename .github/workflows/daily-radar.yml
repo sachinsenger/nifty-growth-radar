@@ -1,8 +1,6 @@
 name: Daily Nifty Growth Radar
 
 on:
-  push:
-    branches: [main]
   schedule:
     - cron: '30 2 * * 1-5' # 08:00 IST
   workflow_dispatch:
@@ -12,9 +10,10 @@ permissions:
   pages: write
   id-token: write
 
+# Do not trigger on generated-dashboard commits. Only one validation/run at a time.
 concurrency:
   group: nifty-growth-radar
-  cancel-in-progress: false
+  cancel-in-progress: true
 
 jobs:
   build:
@@ -68,8 +67,8 @@ jobs:
           if-no-files-found: error
           retention-days: 14
 
-      # GitHub Pages must be enabled in repository Settings > Pages > Source = GitHub Actions.
-      # Keep Pages non-blocking so a Pages setting cannot make the data pipeline fail.
+      # Pages is optional for the data pipeline. If Pages is not enabled,
+      # the HTML artifact and committed docs/index.html remain available.
       - name: Configure Pages
         id: pages
         continue-on-error: true
