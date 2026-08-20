@@ -1,0 +1,1548 @@
+{
+  "method": "technical breakout/volume price-only backtest",
+  "results": [
+    {
+      "n": 2,
+      "note": "Price-only; no point-in-time fundamentals",
+      "5d": {
+        "win_rate": 0.0,
+        "avg_return": -1.29,
+        "median_return": -1.29,
+        "best": -0.61,
+        "worst": -1.98
+      },
+      "10d": {
+        "win_rate": 0.0,
+        "avg_return": -1.14,
+        "median_return": -1.14,
+        "best": -0.18,
+        "worst": -2.1
+      },
+      "20d": {
+        "win_rate": 0.0,
+        "avg_return": -0.59,
+        "median_return": -0.59,
+        "best": -0.44,
+        "worst": -0.75
+      },
+      "40d": {
+        "win_rate": 0.0,
+        "avg_return": -8.77,
+        "median_return": -8.77,
+        "best": -5.83,
+        "worst": -11.71
+      },
+      "60d": {
+        "win_rate": 0.0,
+        "avg_return": -8.03,
+        "median_return": -8.03,
+        "best": -6.47,
+        "worst": -9.59
+      },
+      "name": "Reliance Industries",
+      "symbol": "RELIANCE"
+    },
+    {
+      "n": 0,
+      "note": "No qualifying signals",
+      "name": "HDFC Bank",
+      "symbol": "HDFCBANK"
+    },
+    {
+      "n": 0,
+      "note": "No qualifying signals",
+      "name": "ICICI Bank",
+      "symbol": "ICICIBANK"
+    },
+    {
+      "n": 2,
+      "note": "Price-only; no point-in-time fundamentals",
+      "5d": {
+        "win_rate": 50.0,
+        "avg_return": 0.01,
+        "median_return": 0.01,
+        "best": 1.89,
+        "worst": -1.87
+      },
+      "10d": {
+        "win_rate": 50.0,
+        "avg_return": 1.48,
+        "median_return": 1.48,
+        "best": 3.01,
+        "worst": -0.05
+      },
+      "20d": {
+        "win_rate": 50.0,
+        "avg_return": 1.26,
+        "median_return": 1.26,
+        "best": 2.96,
+        "worst": -0.44
+      },
+      "40d": {
+        "win_rate": 50.0,
+        "avg_return": 1.05,
+        "median_return": 1.05,
+        "best": 2.46,
+        "worst": -0.36
+      },
+      "60d": {
+        "win_rate": 0.0,
+        "avg_return": -4.13,
+        "median_return": -4.13,
+        "best": -1.41,
+        "worst": -6.84
+      },
+      "name": "Bharti Airtel",
+      "symbol": "BHARTIARTL"
+    },
+    {
+      "n": 0,
+      "note": "No qualifying signals",
+      "name": "TCS",
+      "symbol": "TCS"
+    },
+    {
+      "n": 2,
+      "note": "Price-only; no point-in-time fundamentals",
+      "5d": {
+        "win_rate": 50.0,
+        "avg_return": -1.83,
+        "median_return": -1.83,
+        "best": 0.37,
+        "worst": -4.02
+      },
+      "10d": {
+        "win_rate": 0.0,
+        "avg_return": -3.28,
+        "median_return": -3.28,
+        "best": -1.97,
+        "worst": -4.58
+      },
+      "20d": {
+        "win_rate": 50.0,
+        "avg_return": -0.43,
+        "median_return": -0.43,
+        "best": 1.23,
+        "worst": -2.08
+      },
+      "40d": {
+        "win_rate": 0.0,
+        "avg_return": -16.9,
+        "median_return": -16.9,
+        "best": -15.1,
+        "worst": -18.7
+      },
+      "60d": {
+        "win_rate": 0.0,
+        "avg_return": -25.21,
+        "median_return": -25.21,
+        "best": -22.68,
+        "worst": -27.75
+      },
+      "name": "Infosys",
+      "symbol": "INFY"
+    },
+    {
+      "n": 14,
+      "note": "Price-only; no point-in-time fundamentals",
+      "5d": {
+        "win_rate": 78.6,
+        "avg_return": 0.97,
+        "median_return": 0.67,
+        "best": 5.42,
+        "worst": -1.23
+      },
+      "10d": {
+        "win_rate": 92.9,
+        "avg_return": 3.05,
+        "median_return": 2.39,
+        "best": 10.95,
+        "worst": -2.31
+      },
+      "20d": {
+        "win_rate": 71.4,
+        "avg_return": 3.48,
+        "median_return": 3.92,
+        "best": 15.02,
+        "worst": -12.19
+      },
+      "40d": {
+        "win_rate": 71.4,
+        "avg_return": 1.21,
+        "median_return": 2.53,
+        "best": 11.72,
+        "worst": -10.5
+      },
+      "60d": {
+        "win_rate": 78.6,
+        "avg_return": 3.09,
+        "median_return": 7.72,
+        "best": 12.96,
+        "worst": -19.22
+      },
+      "name": "State Bank of India",
+      "symbol": "SBIN"
+    },
+    {
+      "n": 0,
+      "note": "No qualifying signals",
+      "name": "LICI",
+      "symbol": "LICI"
+    },
+    {
+      "n": 0,
+      "note": "No qualifying signals",
+      "name": "ITC",
+      "symbol": "ITC"
+    },
+    {
+      "n": 0,
+      "note": "No qualifying signals",
+      "name": "Hindustan Unilever",
+      "symbol": "HINDUNILVR"
+    },
+    {
+      "n": 4,
+      "note": "Price-only; no point-in-time fundamentals",
+      "5d": {
+        "win_rate": 75.0,
+        "avg_return": 0.77,
+        "median_return": 0.98,
+        "best": 2.35,
+        "worst": -1.22
+      },
+      "10d": {
+        "win_rate": 50.0,
+        "avg_return": 0.96,
+        "median_return": 0.3,
+        "best": 4.15,
+        "worst": -0.92
+      },
+      "20d": {
+        "win_rate": 100.0,
+        "avg_return": 3.56,
+        "median_return": 3.65,
+        "best": 4.7,
+        "worst": 2.25
+      },
+      "40d": {
+        "win_rate": 100.0,
+        "avg_return": 5.0,
+        "median_return": 5.18,
+        "best": 7.61,
+        "worst": 2.03
+      },
+      "60d": {
+        "win_rate": 50.0,
+        "avg_return": 1.41,
+        "median_return": 1.1,
+        "best": 9.19,
+        "worst": -5.76
+      },
+      "name": "Larsen & Toubro",
+      "symbol": "LT"
+    },
+    {
+      "n": 3,
+      "note": "Price-only; no point-in-time fundamentals",
+      "5d": {
+        "win_rate": 0.0,
+        "avg_return": -2.32,
+        "median_return": -2.46,
+        "best": -1.6,
+        "worst": -2.9
+      },
+      "10d": {
+        "win_rate": 0.0,
+        "avg_return": -1.92,
+        "median_return": -2.22,
+        "best": -0.69,
+        "worst": -2.86
+      },
+      "20d": {
+        "win_rate": 100.0,
+        "avg_return": 2.47,
+        "median_return": 2.1,
+        "best": 3.47,
+        "worst": 1.83
+      },
+      "40d": {
+        "win_rate": 33.3,
+        "avg_return": -4.43,
+        "median_return": -2.3,
+        "best": 4.27,
+        "worst": -15.26
+      },
+      "60d": {
+        "win_rate": 33.3,
+        "avg_return": -2.32,
+        "median_return": -3.38,
+        "best": 3.87,
+        "worst": -7.45
+      },
+      "name": "Axis Bank",
+      "symbol": "AXISBANK"
+    },
+    {
+      "n": 0,
+      "note": "No qualifying signals",
+      "name": "Kotak Mahindra Bank",
+      "symbol": "KOTAKBANK"
+    },
+    {
+      "n": 0,
+      "note": "No qualifying signals",
+      "name": "Bajaj Finance",
+      "symbol": "BAJFINANCE"
+    },
+    {
+      "n": 4,
+      "note": "Price-only; no point-in-time fundamentals",
+      "5d": {
+        "win_rate": 75.0,
+        "avg_return": 1.75,
+        "median_return": 2.09,
+        "best": 3.26,
+        "worst": -0.42
+      },
+      "10d": {
+        "win_rate": 75.0,
+        "avg_return": 3.1,
+        "median_return": 3.71,
+        "best": 5.5,
+        "worst": -0.53
+      },
+      "20d": {
+        "win_rate": 100.0,
+        "avg_return": 8.46,
+        "median_return": 10.57,
+        "best": 10.88,
+        "worst": 1.84
+      },
+      "40d": {
+        "win_rate": 75.0,
+        "avg_return": 9.87,
+        "median_return": 12.49,
+        "best": 15.24,
+        "worst": -0.75
+      },
+      "60d": {
+        "win_rate": 100.0,
+        "avg_return": 8.33,
+        "median_return": 9.94,
+        "best": 11.49,
+        "worst": 1.97
+      },
+      "name": "Maruti Suzuki",
+      "symbol": "MARUTI"
+    },
+    {
+      "n": 3,
+      "note": "Price-only; no point-in-time fundamentals",
+      "5d": {
+        "win_rate": 66.7,
+        "avg_return": -0.26,
+        "median_return": 0.12,
+        "best": 0.44,
+        "worst": -1.34
+      },
+      "10d": {
+        "win_rate": 0.0,
+        "avg_return": -1.37,
+        "median_return": -1.24,
+        "best": -0.17,
+        "worst": -2.71
+      },
+      "20d": {
+        "win_rate": 0.0,
+        "avg_return": -4.91,
+        "median_return": -5.0,
+        "best": -4.71,
+        "worst": -5.02
+      },
+      "40d": {
+        "win_rate": 66.7,
+        "avg_return": -1.05,
+        "median_return": 2.7,
+        "best": 3.61,
+        "worst": -9.47
+      },
+      "60d": {
+        "win_rate": 0.0,
+        "avg_return": -2.16,
+        "median_return": -1.57,
+        "best": -0.59,
+        "worst": -4.31
+      },
+      "name": "Sun Pharma",
+      "symbol": "SUNPHARMA"
+    },
+    {
+      "n": 0,
+      "note": "No qualifying signals",
+      "name": "HCL Technologies",
+      "symbol": "HCLTECH"
+    },
+    {
+      "n": 3,
+      "note": "Price-only; no point-in-time fundamentals",
+      "5d": {
+        "win_rate": 33.3,
+        "avg_return": -2.08,
+        "median_return": -4.22,
+        "best": 2.4,
+        "worst": -4.43
+      },
+      "10d": {
+        "win_rate": 33.3,
+        "avg_return": -1.22,
+        "median_return": -0.74,
+        "best": 0.88,
+        "worst": -3.82
+      },
+      "20d": {
+        "win_rate": 33.3,
+        "avg_return": -0.25,
+        "median_return": -0.15,
+        "best": 0.52,
+        "worst": -1.14
+      },
+      "40d": {
+        "win_rate": 100.0,
+        "avg_return": 5.17,
+        "median_return": 6.3,
+        "best": 7.75,
+        "worst": 1.47
+      },
+      "60d": {
+        "win_rate": 66.7,
+        "avg_return": -0.26,
+        "median_return": 4.02,
+        "best": 4.59,
+        "worst": -9.38
+      },
+      "name": "NTPC",
+      "symbol": "NTPC"
+    },
+    {
+      "n": 2,
+      "note": "Price-only; no point-in-time fundamentals",
+      "5d": {
+        "win_rate": 100.0,
+        "avg_return": 1.87,
+        "median_return": 1.87,
+        "best": 3.28,
+        "worst": 0.47
+      },
+      "10d": {
+        "win_rate": 50.0,
+        "avg_return": 0.11,
+        "median_return": 0.11,
+        "best": 4.62,
+        "worst": -4.39
+      },
+      "20d": {
+        "win_rate": 50.0,
+        "avg_return": 3.06,
+        "median_return": 3.06,
+        "best": 6.65,
+        "worst": -0.52
+      },
+      "40d": {
+        "win_rate": 100.0,
+        "avg_return": 1.43,
+        "median_return": 1.43,
+        "best": 2.26,
+        "worst": 0.59
+      },
+      "60d": {
+        "win_rate": 100.0,
+        "avg_return": 9.45,
+        "median_return": 9.45,
+        "best": 10.97,
+        "worst": 7.92
+      },
+      "name": "Mahindra & Mahindra",
+      "symbol": "M&M"
+    },
+    {
+      "n": 7,
+      "note": "Price-only; no point-in-time fundamentals",
+      "5d": {
+        "win_rate": 57.1,
+        "avg_return": 1.12,
+        "median_return": 0.99,
+        "best": 5.47,
+        "worst": -1.21
+      },
+      "10d": {
+        "win_rate": 57.1,
+        "avg_return": 0.68,
+        "median_return": 1.85,
+        "best": 5.26,
+        "worst": -5.96
+      },
+      "20d": {
+        "win_rate": 57.1,
+        "avg_return": -0.85,
+        "median_return": 0.06,
+        "best": 0.37,
+        "worst": -4.11
+      },
+      "40d": {
+        "win_rate": 57.1,
+        "avg_return": 2.8,
+        "median_return": 6.18,
+        "best": 7.18,
+        "worst": -6.68
+      },
+      "60d": {
+        "win_rate": 57.1,
+        "avg_return": 2.66,
+        "median_return": 4.51,
+        "best": 7.72,
+        "worst": -2.47
+      },
+      "name": "Titan Company",
+      "symbol": "TITAN"
+    },
+    {
+      "n": 6,
+      "note": "Price-only; no point-in-time fundamentals",
+      "5d": {
+        "win_rate": 66.7,
+        "avg_return": 0.89,
+        "median_return": 4.38,
+        "best": 8.95,
+        "worst": -13.61
+      },
+      "10d": {
+        "win_rate": 66.7,
+        "avg_return": 0.05,
+        "median_return": 1.87,
+        "best": 9.46,
+        "worst": -13.33
+      },
+      "20d": {
+        "win_rate": 66.7,
+        "avg_return": 6.81,
+        "median_return": 6.14,
+        "best": 23.51,
+        "worst": -10.61
+      },
+      "40d": {
+        "win_rate": 66.7,
+        "avg_return": 5.56,
+        "median_return": 2.37,
+        "best": 23.81,
+        "worst": -12.07
+      },
+      "60d": {
+        "win_rate": 66.7,
+        "avg_return": 7.68,
+        "median_return": 15.61,
+        "best": 22.51,
+        "worst": -16.42
+      },
+      "name": "BSE",
+      "symbol": "BSE"
+    },
+    {
+      "n": 0,
+      "note": "No qualifying signals",
+      "name": "Oracle Financial Services Software",
+      "symbol": "OFSS"
+    },
+    {
+      "n": 4,
+      "note": "Price-only; no point-in-time fundamentals",
+      "5d": {
+        "win_rate": 100.0,
+        "avg_return": 4.77,
+        "median_return": 3.36,
+        "best": 10.36,
+        "worst": 1.99
+      },
+      "10d": {
+        "win_rate": 100.0,
+        "avg_return": 4.8,
+        "median_return": 3.84,
+        "best": 9.49,
+        "worst": 2.04
+      },
+      "20d": {
+        "win_rate": 25.0,
+        "avg_return": -1.8,
+        "median_return": -1.93,
+        "best": 2.87,
+        "worst": -6.22
+      },
+      "40d": {
+        "win_rate": 100.0,
+        "avg_return": 4.4,
+        "median_return": 3.59,
+        "best": 8.95,
+        "worst": 1.48
+      },
+      "60d": {
+        "win_rate": 100.0,
+        "avg_return": 9.37,
+        "median_return": 10.3,
+        "best": 12.93,
+        "worst": 3.95
+      },
+      "name": "Solar Industries India",
+      "symbol": "SOLARINDS"
+    },
+    {
+      "n": 8,
+      "note": "Price-only; no point-in-time fundamentals",
+      "5d": {
+        "win_rate": 62.5,
+        "avg_return": 0.31,
+        "median_return": 1.28,
+        "best": 5.61,
+        "worst": -4.44
+      },
+      "10d": {
+        "win_rate": 25.0,
+        "avg_return": -5.38,
+        "median_return": -5.29,
+        "best": 9.31,
+        "worst": -17.23
+      },
+      "20d": {
+        "win_rate": 37.5,
+        "avg_return": -5.36,
+        "median_return": -7.23,
+        "best": 15.47,
+        "worst": -20.52
+      },
+      "40d": {
+        "win_rate": 50.0,
+        "avg_return": 1.25,
+        "median_return": -0.14,
+        "best": 13.46,
+        "worst": -5.81
+      },
+      "60d": {
+        "win_rate": 75.0,
+        "avg_return": 6.77,
+        "median_return": 9.16,
+        "best": 18.39,
+        "worst": -7.54
+      },
+      "name": "Polycab India",
+      "symbol": "POLYCAB"
+    },
+    {
+      "n": 1,
+      "note": "Price-only; no point-in-time fundamentals",
+      "5d": {
+        "win_rate": 100.0,
+        "avg_return": 2.41,
+        "median_return": 2.41,
+        "best": 2.41,
+        "worst": 2.41
+      },
+      "10d": {
+        "win_rate": 100.0,
+        "avg_return": 2.29,
+        "median_return": 2.29,
+        "best": 2.29,
+        "worst": 2.29
+      },
+      "20d": {
+        "win_rate": 0.0,
+        "avg_return": -5.14,
+        "median_return": -5.14,
+        "best": -5.14,
+        "worst": -5.14
+      },
+      "40d": {
+        "win_rate": 0.0,
+        "avg_return": -12.57,
+        "median_return": -12.57,
+        "best": -12.57,
+        "worst": -12.57
+      },
+      "60d": {
+        "win_rate": 0.0,
+        "avg_return": -15.68,
+        "median_return": -15.68,
+        "best": -15.68,
+        "worst": -15.68
+      },
+      "name": "Dixon Technologies",
+      "symbol": "DIXON"
+    },
+    {
+      "n": 5,
+      "note": "Price-only; no point-in-time fundamentals",
+      "5d": {
+        "win_rate": 80.0,
+        "avg_return": 3.15,
+        "median_return": 3.85,
+        "best": 7.62,
+        "worst": -1.38
+      },
+      "10d": {
+        "win_rate": 80.0,
+        "avg_return": 1.94,
+        "median_return": 2.38,
+        "best": 5.35,
+        "worst": -3.4
+      },
+      "20d": {
+        "win_rate": 40.0,
+        "avg_return": -0.19,
+        "median_return": -0.0,
+        "best": 6.38,
+        "worst": -5.42
+      },
+      "40d": {
+        "win_rate": 100.0,
+        "avg_return": 7.64,
+        "median_return": 8.05,
+        "best": 10.28,
+        "worst": 4.45
+      },
+      "60d": {
+        "win_rate": 40.0,
+        "avg_return": 2.74,
+        "median_return": -1.3,
+        "best": 14.05,
+        "worst": -5.65
+      },
+      "name": "Cummins India",
+      "symbol": "CUMMINSIND"
+    },
+    {
+      "n": 5,
+      "note": "Price-only; no point-in-time fundamentals",
+      "5d": {
+        "win_rate": 80.0,
+        "avg_return": 1.79,
+        "median_return": 2.99,
+        "best": 4.06,
+        "worst": -1.26
+      },
+      "10d": {
+        "win_rate": 100.0,
+        "avg_return": 4.44,
+        "median_return": 3.92,
+        "best": 10.34,
+        "worst": 0.15
+      },
+      "20d": {
+        "win_rate": 80.0,
+        "avg_return": 3.1,
+        "median_return": 2.98,
+        "best": 9.17,
+        "worst": -1.01
+      },
+      "40d": {
+        "win_rate": 80.0,
+        "avg_return": 5.22,
+        "median_return": 1.21,
+        "best": 21.12,
+        "worst": -4.64
+      },
+      "60d": {
+        "win_rate": 20.0,
+        "avg_return": -2.83,
+        "median_return": -4.02,
+        "best": 15.87,
+        "worst": -13.99
+      },
+      "name": "CG Power",
+      "symbol": "CGPOWER"
+    },
+    {
+      "n": 0,
+      "note": "No qualifying signals",
+      "name": "Coforge",
+      "symbol": "COFORGE"
+    },
+    {
+      "n": 3,
+      "note": "Price-only; no point-in-time fundamentals",
+      "5d": {
+        "win_rate": 100.0,
+        "avg_return": 2.51,
+        "median_return": 1.88,
+        "best": 4.7,
+        "worst": 0.96
+      },
+      "10d": {
+        "win_rate": 100.0,
+        "avg_return": 2.72,
+        "median_return": 1.9,
+        "best": 5.7,
+        "worst": 0.57
+      },
+      "20d": {
+        "win_rate": 100.0,
+        "avg_return": 4.75,
+        "median_return": 3.7,
+        "best": 7.23,
+        "worst": 3.32
+      },
+      "40d": {
+        "win_rate": 66.7,
+        "avg_return": 1.93,
+        "median_return": 0.96,
+        "best": 10.24,
+        "worst": -5.42
+      },
+      "60d": {
+        "win_rate": 100.0,
+        "avg_return": 11.76,
+        "median_return": 12.62,
+        "best": 17.42,
+        "worst": 5.24
+      },
+      "name": "Federal Bank",
+      "symbol": "FEDERALBNK"
+    },
+    {
+      "n": 10,
+      "note": "Price-only; no point-in-time fundamentals",
+      "5d": {
+        "win_rate": 70.0,
+        "avg_return": 0.81,
+        "median_return": 1.33,
+        "best": 4.57,
+        "worst": -3.31
+      },
+      "10d": {
+        "win_rate": 70.0,
+        "avg_return": 1.33,
+        "median_return": 1.93,
+        "best": 6.01,
+        "worst": -5.39
+      },
+      "20d": {
+        "win_rate": 70.0,
+        "avg_return": 5.75,
+        "median_return": 6.77,
+        "best": 17.92,
+        "worst": -11.33
+      },
+      "40d": {
+        "win_rate": 60.0,
+        "avg_return": 9.11,
+        "median_return": 12.79,
+        "best": 26.57,
+        "worst": -8.88
+      },
+      "60d": {
+        "win_rate": 90.0,
+        "avg_return": 3.92,
+        "median_return": 4.03,
+        "best": 12.52,
+        "worst": -15.18
+      },
+      "name": "Indian Bank",
+      "symbol": "INDIANB"
+    },
+    {
+      "n": 4,
+      "note": "Price-only; no point-in-time fundamentals",
+      "5d": {
+        "win_rate": 25.0,
+        "avg_return": -1.95,
+        "median_return": -1.36,
+        "best": 0.56,
+        "worst": -5.66
+      },
+      "10d": {
+        "win_rate": 75.0,
+        "avg_return": 0.71,
+        "median_return": 0.37,
+        "best": 6.4,
+        "worst": -4.32
+      },
+      "20d": {
+        "win_rate": 75.0,
+        "avg_return": 3.43,
+        "median_return": 5.23,
+        "best": 10.84,
+        "worst": -7.57
+      },
+      "40d": {
+        "win_rate": 75.0,
+        "avg_return": 6.7,
+        "median_return": 10.15,
+        "best": 21.32,
+        "worst": -14.82
+      },
+      "60d": {
+        "win_rate": 75.0,
+        "avg_return": 7.31,
+        "median_return": 11.15,
+        "best": 23.04,
+        "worst": -16.1
+      },
+      "name": "Muthoot Finance",
+      "symbol": "MUTHOOTFIN"
+    },
+    {
+      "n": 1,
+      "note": "Price-only; no point-in-time fundamentals",
+      "5d": {
+        "win_rate": 0.0,
+        "avg_return": -6.99,
+        "median_return": -6.99,
+        "best": -6.99,
+        "worst": -6.99
+      },
+      "10d": {
+        "win_rate": 0.0,
+        "avg_return": -2.21,
+        "median_return": -2.21,
+        "best": -2.21,
+        "worst": -2.21
+      },
+      "20d": {
+        "win_rate": 0.0,
+        "avg_return": -12.15,
+        "median_return": -12.15,
+        "best": -12.15,
+        "worst": -12.15
+      },
+      "40d": {
+        "win_rate": 0.0,
+        "avg_return": -20.67,
+        "median_return": -20.67,
+        "best": -20.67,
+        "worst": -20.67
+      },
+      "60d": {
+        "win_rate": 0.0,
+        "avg_return": -26.68,
+        "median_return": -26.68,
+        "best": -26.68,
+        "worst": -26.68
+      },
+      "name": "PB Fintech",
+      "symbol": "POLICYBZR"
+    },
+    {
+      "n": 0,
+      "note": "No qualifying signals",
+      "name": "Mazagon Dock Shipbuilders",
+      "symbol": "MAZDOCK"
+    },
+    {
+      "n": 3,
+      "note": "Price-only; no point-in-time fundamentals",
+      "5d": {
+        "win_rate": 33.3,
+        "avg_return": -0.65,
+        "median_return": -0.29,
+        "best": 2.8,
+        "worst": -4.46
+      },
+      "10d": {
+        "win_rate": 66.7,
+        "avg_return": 0.61,
+        "median_return": 1.83,
+        "best": 5.72,
+        "worst": -5.71
+      },
+      "20d": {
+        "win_rate": 66.7,
+        "avg_return": 0.11,
+        "median_return": 0.74,
+        "best": 6.53,
+        "worst": -6.94
+      },
+      "40d": {
+        "win_rate": 33.3,
+        "avg_return": -4.03,
+        "median_return": -2.95,
+        "best": 2.44,
+        "worst": -11.58
+      },
+      "60d": {
+        "win_rate": 0.0,
+        "avg_return": -9.41,
+        "median_return": -11.64,
+        "best": -1.93,
+        "worst": -14.67
+      },
+      "name": "Astral",
+      "symbol": "ASTRAL"
+    },
+    {
+      "n": 4,
+      "note": "Price-only; no point-in-time fundamentals",
+      "5d": {
+        "win_rate": 50.0,
+        "avg_return": 0.18,
+        "median_return": 0.56,
+        "best": 2.44,
+        "worst": -2.85
+      },
+      "10d": {
+        "win_rate": 25.0,
+        "avg_return": 1.44,
+        "median_return": -0.98,
+        "best": 9.89,
+        "worst": -2.18
+      },
+      "20d": {
+        "win_rate": 50.0,
+        "avg_return": 1.24,
+        "median_return": 0.07,
+        "best": 9.37,
+        "worst": -4.55
+      },
+      "40d": {
+        "win_rate": 50.0,
+        "avg_return": 1.36,
+        "median_return": -0.4,
+        "best": 13.43,
+        "worst": -7.17
+      },
+      "60d": {
+        "win_rate": 50.0,
+        "avg_return": 0.33,
+        "median_return": -0.78,
+        "best": 14.17,
+        "worst": -11.29
+      },
+      "name": "APL Apollo Tubes",
+      "symbol": "APLAPOLLO"
+    },
+    {
+      "n": 1,
+      "note": "Price-only; no point-in-time fundamentals",
+      "5d": {
+        "win_rate": 100.0,
+        "avg_return": 1.57,
+        "median_return": 1.57,
+        "best": 1.57,
+        "worst": 1.57
+      },
+      "10d": {
+        "win_rate": 100.0,
+        "avg_return": 0.24,
+        "median_return": 0.24,
+        "best": 0.24,
+        "worst": 0.24
+      },
+      "20d": {
+        "win_rate": 0.0,
+        "avg_return": -0.53,
+        "median_return": -0.53,
+        "best": -0.53,
+        "worst": -0.53
+      },
+      "40d": {
+        "win_rate": 100.0,
+        "avg_return": 1.38,
+        "median_return": 1.38,
+        "best": 1.38,
+        "worst": 1.38
+      },
+      "60d": {
+        "win_rate": 0.0,
+        "avg_return": -13.25,
+        "median_return": -13.25,
+        "best": -13.25,
+        "worst": -13.25
+      },
+      "name": "Persistent Systems",
+      "symbol": "PERSISTENT"
+    },
+    {
+      "n": 0,
+      "note": "No qualifying signals",
+      "name": "Max Healthcare",
+      "symbol": "MAXHEALTH"
+    },
+    {
+      "n": 0,
+      "note": "No qualifying signals",
+      "name": "Supreme Industries",
+      "symbol": "SUPREMEIND"
+    },
+    {
+      "n": 5,
+      "note": "Price-only; no point-in-time fundamentals",
+      "5d": {
+        "win_rate": 100.0,
+        "avg_return": 1.36,
+        "median_return": 0.47,
+        "best": 4.02,
+        "worst": 0.05
+      },
+      "10d": {
+        "win_rate": 60.0,
+        "avg_return": 2.14,
+        "median_return": 2.39,
+        "best": 6.21,
+        "worst": -3.02
+      },
+      "20d": {
+        "win_rate": 60.0,
+        "avg_return": 0.16,
+        "median_return": 0.32,
+        "best": 5.39,
+        "worst": -5.43
+      },
+      "40d": {
+        "win_rate": 60.0,
+        "avg_return": -0.56,
+        "median_return": 1.25,
+        "best": 6.31,
+        "worst": -9.24
+      },
+      "60d": {
+        "win_rate": 100.0,
+        "avg_return": 13.4,
+        "median_return": 14.54,
+        "best": 21.02,
+        "worst": 4.14
+      },
+      "name": "Sona BLW Precision Forgings",
+      "symbol": "SONACOMS"
+    },
+    {
+      "n": 7,
+      "note": "Price-only; no point-in-time fundamentals",
+      "5d": {
+        "win_rate": 57.1,
+        "avg_return": 1.44,
+        "median_return": 1.32,
+        "best": 5.67,
+        "worst": -2.21
+      },
+      "10d": {
+        "win_rate": 71.4,
+        "avg_return": 4.62,
+        "median_return": 1.31,
+        "best": 13.79,
+        "worst": -4.72
+      },
+      "20d": {
+        "win_rate": 42.9,
+        "avg_return": 3.5,
+        "median_return": -1.34,
+        "best": 19.68,
+        "worst": -3.17
+      },
+      "40d": {
+        "win_rate": 100.0,
+        "avg_return": 7.13,
+        "median_return": 7.48,
+        "best": 10.75,
+        "worst": 0.77
+      },
+      "60d": {
+        "win_rate": 100.0,
+        "avg_return": 14.2,
+        "median_return": 12.2,
+        "best": 21.75,
+        "worst": 7.23
+      },
+      "name": "Bharat Forge",
+      "symbol": "BHARATFORG"
+    },
+    {
+      "n": 0,
+      "note": "No qualifying signals",
+      "name": "Zensar Technologies",
+      "symbol": "ZENSARTECH"
+    },
+    {
+      "n": 6,
+      "note": "Price-only; no point-in-time fundamentals",
+      "5d": {
+        "win_rate": 100.0,
+        "avg_return": 11.88,
+        "median_return": 11.62,
+        "best": 21.65,
+        "worst": 3.66
+      },
+      "10d": {
+        "win_rate": 66.7,
+        "avg_return": 12.17,
+        "median_return": 9.06,
+        "best": 31.99,
+        "worst": -3.07
+      },
+      "20d": {
+        "win_rate": 100.0,
+        "avg_return": 46.05,
+        "median_return": 48.49,
+        "best": 57.1,
+        "worst": 28.03
+      },
+      "40d": {
+        "win_rate": 100.0,
+        "avg_return": 68.99,
+        "median_return": 63.58,
+        "best": 97.91,
+        "worst": 51.62
+      },
+      "60d": {
+        "win_rate": 100.0,
+        "avg_return": 61.42,
+        "median_return": 48.5,
+        "best": 133.62,
+        "worst": 37.08
+      },
+      "name": "HFCL",
+      "symbol": "HFCL"
+    },
+    {
+      "n": 1,
+      "note": "Price-only; no point-in-time fundamentals",
+      "5d": {
+        "win_rate": 0.0,
+        "avg_return": -7.79,
+        "median_return": -7.79,
+        "best": -7.79,
+        "worst": -7.79
+      },
+      "10d": {
+        "win_rate": 0.0,
+        "avg_return": -8.54,
+        "median_return": -8.54,
+        "best": -8.54,
+        "worst": -8.54
+      },
+      "20d": {
+        "win_rate": 0.0,
+        "avg_return": -12.83,
+        "median_return": -12.83,
+        "best": -12.83,
+        "worst": -12.83
+      },
+      "40d": {
+        "win_rate": 0.0,
+        "avg_return": -12.15,
+        "median_return": -12.15,
+        "best": -12.15,
+        "worst": -12.15
+      },
+      "60d": {
+        "win_rate": 0.0,
+        "avg_return": -18.56,
+        "median_return": -18.56,
+        "best": -18.56,
+        "worst": -18.56
+      },
+      "name": "Aegis Logistics",
+      "symbol": "AEGISLOG"
+    },
+    {
+      "n": 3,
+      "note": "Price-only; no point-in-time fundamentals",
+      "5d": {
+        "win_rate": 33.3,
+        "avg_return": -1.39,
+        "median_return": -0.18,
+        "best": 0.2,
+        "worst": -4.18
+      },
+      "10d": {
+        "win_rate": 33.3,
+        "avg_return": -4.2,
+        "median_return": -3.02,
+        "best": 0.53,
+        "worst": -10.1
+      },
+      "20d": {
+        "win_rate": 0.0,
+        "avg_return": -6.51,
+        "median_return": -4.69,
+        "best": -3.6,
+        "worst": -11.24
+      },
+      "40d": {
+        "win_rate": 0.0,
+        "avg_return": -15.31,
+        "median_return": -14.47,
+        "best": -11.56,
+        "worst": -19.9
+      },
+      "60d": {
+        "win_rate": 0.0,
+        "avg_return": -23.73,
+        "median_return": -23.11,
+        "best": -22.78,
+        "worst": -25.29
+      },
+      "name": "Neuland Laboratories",
+      "symbol": "NEULANDLAB"
+    },
+    {
+      "n": 7,
+      "note": "Price-only; no point-in-time fundamentals",
+      "5d": {
+        "win_rate": 71.4,
+        "avg_return": 1.76,
+        "median_return": 1.24,
+        "best": 10.97,
+        "worst": -11.87
+      },
+      "10d": {
+        "win_rate": 57.1,
+        "avg_return": -1.45,
+        "median_return": 0.28,
+        "best": 5.99,
+        "worst": -16.78
+      },
+      "20d": {
+        "win_rate": 0.0,
+        "avg_return": -9.38,
+        "median_return": -10.36,
+        "best": -0.88,
+        "worst": -16.32
+      },
+      "40d": {
+        "win_rate": 57.1,
+        "avg_return": 8.68,
+        "median_return": 14.65,
+        "best": 29.03,
+        "worst": -15.14
+      },
+      "60d": {
+        "win_rate": 28.6,
+        "avg_return": -6.06,
+        "median_return": -2.34,
+        "best": 13.37,
+        "worst": -25.97
+      },
+      "name": "Force Motors",
+      "symbol": "FORCEMOT"
+    },
+    {
+      "n": 0,
+      "note": "No qualifying signals",
+      "name": "BLS International",
+      "symbol": "BLS"
+    },
+    {
+      "n": 4,
+      "note": "Price-only; no point-in-time fundamentals",
+      "5d": {
+        "win_rate": 25.0,
+        "avg_return": -1.34,
+        "median_return": -1.09,
+        "best": 6.98,
+        "worst": -10.13
+      },
+      "10d": {
+        "win_rate": 50.0,
+        "avg_return": -3.93,
+        "median_return": -4.39,
+        "best": 2.35,
+        "worst": -9.31
+      },
+      "20d": {
+        "win_rate": 25.0,
+        "avg_return": -4.25,
+        "median_return": -4.66,
+        "best": 0.29,
+        "worst": -7.98
+      },
+      "40d": {
+        "win_rate": 25.0,
+        "avg_return": -0.8,
+        "median_return": -0.11,
+        "best": 2.48,
+        "worst": -5.44
+      },
+      "60d": {
+        "win_rate": 50.0,
+        "avg_return": -9.5,
+        "median_return": -3.87,
+        "best": 5.15,
+        "worst": -35.41
+      },
+      "name": "eClerx Services",
+      "symbol": "ECLERX"
+    },
+    {
+      "n": 0,
+      "note": "No qualifying signals",
+      "name": "Greaves Cotton",
+      "symbol": "GREAVESCOT"
+    },
+    {
+      "n": 0,
+      "note": "No qualifying signals",
+      "name": "Marksans Pharma",
+      "symbol": "MARKSANS"
+    },
+    {
+      "n": 0,
+      "note": "No qualifying signals",
+      "name": "Balaji Amines",
+      "symbol": "BALAMINES"
+    },
+    {
+      "n": 0,
+      "note": "No qualifying signals",
+      "name": "CDSL",
+      "symbol": "CDSL"
+    },
+    {
+      "n": 0,
+      "note": "No qualifying signals",
+      "name": "Delhivery",
+      "symbol": "DELHIVERY"
+    },
+    {
+      "n": 9,
+      "note": "Price-only; no point-in-time fundamentals",
+      "5d": {
+        "win_rate": 66.7,
+        "avg_return": 1.8,
+        "median_return": 3.06,
+        "best": 6.87,
+        "worst": -4.44
+      },
+      "10d": {
+        "win_rate": 88.9,
+        "avg_return": 6.63,
+        "median_return": 7.65,
+        "best": 13.7,
+        "worst": -0.11
+      },
+      "20d": {
+        "win_rate": 88.9,
+        "avg_return": 12.62,
+        "median_return": 17.84,
+        "best": 21.11,
+        "worst": -5.66
+      },
+      "40d": {
+        "win_rate": 88.9,
+        "avg_return": 21.77,
+        "median_return": 21.06,
+        "best": 50.85,
+        "worst": -6.31
+      },
+      "60d": {
+        "win_rate": 88.9,
+        "avg_return": 30.51,
+        "median_return": 36.09,
+        "best": 46.3,
+        "worst": -7.15
+      },
+      "name": "Ather Energy",
+      "symbol": "ATHERENERG"
+    },
+    {
+      "n": 0,
+      "note": "No qualifying signals",
+      "name": "KIMS Hospitals",
+      "symbol": "KIMS"
+    },
+    {
+      "n": 5,
+      "note": "Price-only; no point-in-time fundamentals",
+      "5d": {
+        "win_rate": 40.0,
+        "avg_return": 1.04,
+        "median_return": -0.81,
+        "best": 7.63,
+        "worst": -7.91
+      },
+      "10d": {
+        "win_rate": 20.0,
+        "avg_return": -0.23,
+        "median_return": -0.88,
+        "best": 11.02,
+        "worst": -7.46
+      },
+      "20d": {
+        "win_rate": 20.0,
+        "avg_return": -3.63,
+        "median_return": -4.47,
+        "best": 2.77,
+        "worst": -6.42
+      },
+      "40d": {
+        "win_rate": 100.0,
+        "avg_return": 22.71,
+        "median_return": 25.84,
+        "best": 26.52,
+        "worst": 17.54
+      },
+      "60d": {
+        "win_rate": 100.0,
+        "avg_return": 13.86,
+        "median_return": 18.38,
+        "best": 25.4,
+        "worst": 2.63
+      },
+      "name": "Data Patterns",
+      "symbol": "DATAPATTNS"
+    },
+    {
+      "n": 10,
+      "note": "Price-only; no point-in-time fundamentals",
+      "5d": {
+        "win_rate": 60.0,
+        "avg_return": 3.36,
+        "median_return": 4.25,
+        "best": 12.9,
+        "worst": -6.68
+      },
+      "10d": {
+        "win_rate": 60.0,
+        "avg_return": 2.22,
+        "median_return": 4.73,
+        "best": 10.13,
+        "worst": -8.86
+      },
+      "20d": {
+        "win_rate": 50.0,
+        "avg_return": 1.43,
+        "median_return": 2.53,
+        "best": 14.68,
+        "worst": -15.92
+      },
+      "40d": {
+        "win_rate": 100.0,
+        "avg_return": 14.76,
+        "median_return": 15.94,
+        "best": 20.94,
+        "worst": 7.69
+      },
+      "60d": {
+        "win_rate": 100.0,
+        "avg_return": 25.05,
+        "median_return": 21.64,
+        "best": 52.55,
+        "worst": 8.34
+      },
+      "name": "Kirloskar Oil Engines",
+      "symbol": "KIRLOSENG"
+    },
+    {
+      "n": 0,
+      "note": "No qualifying signals",
+      "name": "CAMS",
+      "symbol": "CAMS"
+    },
+    {
+      "n": 0,
+      "note": "No qualifying signals",
+      "name": "Narayana Hrudayalaya",
+      "symbol": "NH"
+    },
+    {
+      "name": "Karur Vysya Bank",
+      "symbol": "KVBL",
+      "error": "openchart attempt 1: RuntimeError: OpenChart: KVBL-EQ/EQ: ValueError: Empty market-data response | KVBL/NSE: ValueError: Empty market-data response | openchart attempt 2: RuntimeError: OpenChart: KVBL-EQ/EQ: ValueError: Empty market-data response | KVBL/NSE: ValueError: Empty market-data response | jugaad attempt 1: KeyError: \"None of [Index(['CH_TIMESTAMP', 'CH_SERIES', 'CH_OPENING_PRICE', 'CH_TRADE_HIGH_PRICE',\\n       'CH_TRADE_LOW_PRICE', 'CH_PREVIOUS_CLS_PRICE', 'CH_LAST_TRADED_PRICE',\\n       'CH_CLOSING_PRICE', 'VWAP', 'CH_TOT_TRADED_QTY', 'CH_TOT_TRADED_VAL',\\n       'CH_TOTAL_TRADES', 'COP_DELIV_QTY', 'COP_DELIV_PERC', 'CH_SYMBOL'],\\n      dtype='object')] are in the [columns]\" | jugaad attempt 2: KeyError: \"None of [Index(['CH_TIMESTAMP', 'CH_SERIES', 'CH_OPENING_PRICE', 'CH_TRADE_HIGH_PRICE',\\n       'CH_TRADE_LOW_PRICE', 'CH_PREVIOUS_CLS_PRICE', 'CH_LAST_TRADED_PRICE',\\n       'CH_CLOSING_PRICE', 'VWAP', 'CH_TOT_TRADED_QTY', 'CH_TOT_TRADED_VAL',\\n       'CH_TOTAL_TRADES', 'COP_DELIV_QTY', 'COP_DELIV_PERC', 'CH_SYMBOL'],\\n      dtype='object')] are in the [columns]\""
+    }
+  ]
+}
