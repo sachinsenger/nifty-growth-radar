@@ -55,41 +55,41 @@
       "symbol": "ICICIBANK"
     },
     {
-      "n": 2,
+      "n": 3,
       "note": "Price-only; no point-in-time fundamentals",
       "5d": {
-        "win_rate": 50.0,
-        "avg_return": 0.01,
-        "median_return": 0.01,
-        "best": 1.89,
+        "win_rate": 66.7,
+        "avg_return": 1.13,
+        "median_return": 1.89,
+        "best": 3.38,
         "worst": -1.87
       },
       "10d": {
-        "win_rate": 50.0,
-        "avg_return": 1.48,
-        "median_return": 1.48,
-        "best": 3.01,
+        "win_rate": 66.7,
+        "avg_return": 2.01,
+        "median_return": 3.01,
+        "best": 3.08,
         "worst": -0.05
       },
       "20d": {
-        "win_rate": 50.0,
-        "avg_return": 1.26,
-        "median_return": 1.26,
-        "best": 2.96,
+        "win_rate": 66.7,
+        "avg_return": 3.11,
+        "median_return": 2.96,
+        "best": 6.82,
         "worst": -0.44
       },
       "40d": {
-        "win_rate": 50.0,
-        "avg_return": 1.05,
-        "median_return": 1.05,
-        "best": 2.46,
+        "win_rate": 66.7,
+        "avg_return": 1.66,
+        "median_return": 2.46,
+        "best": 2.87,
         "worst": -0.36
       },
       "60d": {
-        "win_rate": 0.0,
-        "avg_return": -4.13,
-        "median_return": -4.13,
-        "best": -1.41,
+        "win_rate": 33.3,
+        "avg_return": -2.51,
+        "median_return": -1.41,
+        "best": 0.74,
         "worst": -6.84
       },
       "name": "Bharti Airtel",
@@ -154,28 +154,28 @@
       },
       "10d": {
         "win_rate": 92.9,
-        "avg_return": 3.05,
+        "avg_return": 3.03,
         "median_return": 2.39,
         "best": 10.95,
         "worst": -2.31
       },
       "20d": {
         "win_rate": 71.4,
-        "avg_return": 3.48,
+        "avg_return": 3.37,
         "median_return": 3.92,
         "best": 15.02,
         "worst": -12.19
       },
       "40d": {
         "win_rate": 71.4,
-        "avg_return": 1.21,
+        "avg_return": 1.18,
         "median_return": 2.53,
         "best": 11.72,
         "worst": -10.5
       },
       "60d": {
         "win_rate": 78.6,
-        "avg_return": 3.09,
+        "avg_return": 3.07,
         "median_return": 7.72,
         "best": 12.96,
         "worst": -19.22
@@ -378,8 +378,43 @@
       "symbol": "SUNPHARMA"
     },
     {
-      "n": 0,
-      "note": "No qualifying signals",
+      "n": 1,
+      "note": "Price-only; no point-in-time fundamentals",
+      "5d": {
+        "win_rate": 0.0,
+        "avg_return": -2.69,
+        "median_return": -2.69,
+        "best": -2.69,
+        "worst": -2.69
+      },
+      "10d": {
+        "win_rate": 0.0,
+        "avg_return": -1.33,
+        "median_return": -1.33,
+        "best": -1.33,
+        "worst": -1.33
+      },
+      "20d": {
+        "win_rate": 0.0,
+        "avg_return": -0.46,
+        "median_return": -0.46,
+        "best": -0.46,
+        "worst": -0.46
+      },
+      "40d": {
+        "win_rate": 100.0,
+        "avg_return": 2.13,
+        "median_return": 2.13,
+        "best": 2.13,
+        "worst": 2.13
+      },
+      "60d": {
+        "win_rate": 0.0,
+        "avg_return": -12.47,
+        "median_return": -12.47,
+        "best": -12.47,
+        "worst": -12.47
+      },
       "name": "HCL Technologies",
       "symbol": "HCLTECH"
     },
@@ -718,40 +753,40 @@
       "symbol": "CUMMINSIND"
     },
     {
-      "n": 5,
+      "n": 3,
       "note": "Price-only; no point-in-time fundamentals",
       "5d": {
-        "win_rate": 80.0,
-        "avg_return": 1.79,
+        "win_rate": 66.7,
+        "avg_return": 1.61,
         "median_return": 2.99,
-        "best": 4.06,
+        "best": 3.09,
         "worst": -1.26
       },
       "10d": {
         "win_rate": 100.0,
-        "avg_return": 4.44,
-        "median_return": 3.92,
-        "best": 10.34,
+        "avg_return": 1.58,
+        "median_return": 0.68,
+        "best": 3.92,
         "worst": 0.15
       },
       "20d": {
-        "win_rate": 80.0,
-        "avg_return": 3.1,
+        "win_rate": 66.7,
+        "avg_return": 3.71,
         "median_return": 2.98,
         "best": 9.17,
         "worst": -1.01
       },
       "40d": {
-        "win_rate": 80.0,
-        "avg_return": 5.22,
-        "median_return": 1.21,
+        "win_rate": 66.7,
+        "avg_return": 8.05,
+        "median_return": 7.68,
         "best": 21.12,
         "worst": -4.64
       },
       "60d": {
-        "win_rate": 20.0,
-        "avg_return": -2.83,
-        "median_return": -4.02,
+        "win_rate": 33.3,
+        "avg_return": -0.66,
+        "median_return": -3.84,
         "best": 15.87,
         "worst": -13.99
       },
@@ -759,8 +794,43 @@
       "symbol": "CGPOWER"
     },
     {
-      "n": 0,
-      "note": "No qualifying signals",
+      "n": 1,
+      "note": "Price-only; no point-in-time fundamentals",
+      "5d": {
+        "win_rate": 0.0,
+        "avg_return": -6.35,
+        "median_return": -6.35,
+        "best": -6.35,
+        "worst": -6.35
+      },
+      "10d": {
+        "win_rate": 0.0,
+        "avg_return": -5.67,
+        "median_return": -5.67,
+        "best": -5.67,
+        "worst": -5.67
+      },
+      "20d": {
+        "win_rate": 0.0,
+        "avg_return": -16.07,
+        "median_return": -16.07,
+        "best": -16.07,
+        "worst": -16.07
+      },
+      "40d": {
+        "win_rate": 0.0,
+        "avg_return": -15.16,
+        "median_return": -15.16,
+        "best": -15.16,
+        "worst": -15.16
+      },
+      "60d": {
+        "win_rate": 0.0,
+        "avg_return": -40.87,
+        "median_return": -40.87,
+        "best": -40.87,
+        "worst": -40.87
+      },
       "name": "Coforge",
       "symbol": "COFORGE"
     },
@@ -888,41 +958,41 @@
       "symbol": "MUTHOOTFIN"
     },
     {
-      "n": 1,
+      "n": 2,
       "note": "Price-only; no point-in-time fundamentals",
       "5d": {
-        "win_rate": 0.0,
-        "avg_return": -6.99,
-        "median_return": -6.99,
-        "best": -6.99,
+        "win_rate": 50.0,
+        "avg_return": -3.17,
+        "median_return": -3.17,
+        "best": 0.65,
         "worst": -6.99
       },
       "10d": {
         "win_rate": 0.0,
-        "avg_return": -2.21,
-        "median_return": -2.21,
-        "best": -2.21,
+        "avg_return": -1.94,
+        "median_return": -1.94,
+        "best": -1.66,
         "worst": -2.21
       },
       "20d": {
         "win_rate": 0.0,
-        "avg_return": -12.15,
-        "median_return": -12.15,
-        "best": -12.15,
+        "avg_return": -10.52,
+        "median_return": -10.52,
+        "best": -8.89,
         "worst": -12.15
       },
       "40d": {
         "win_rate": 0.0,
-        "avg_return": -20.67,
-        "median_return": -20.67,
+        "avg_return": -22.72,
+        "median_return": -22.72,
         "best": -20.67,
-        "worst": -20.67
+        "worst": -24.77
       },
       "60d": {
         "win_rate": 0.0,
-        "avg_return": -26.68,
-        "median_return": -26.68,
-        "best": -26.68,
+        "avg_return": -24.86,
+        "median_return": -24.86,
+        "best": -23.05,
         "worst": -26.68
       },
       "name": "PB Fintech",
@@ -935,41 +1005,41 @@
       "symbol": "MAZDOCK"
     },
     {
-      "n": 3,
+      "n": 2,
       "note": "Price-only; no point-in-time fundamentals",
       "5d": {
-        "win_rate": 33.3,
-        "avg_return": -0.65,
-        "median_return": -0.29,
-        "best": 2.8,
+        "win_rate": 0.0,
+        "avg_return": -2.37,
+        "median_return": -2.37,
+        "best": -0.29,
         "worst": -4.46
       },
       "10d": {
-        "win_rate": 66.7,
-        "avg_return": 0.61,
-        "median_return": 1.83,
-        "best": 5.72,
+        "win_rate": 50.0,
+        "avg_return": -1.94,
+        "median_return": -1.94,
+        "best": 1.83,
         "worst": -5.71
       },
       "20d": {
-        "win_rate": 66.7,
-        "avg_return": 0.11,
-        "median_return": 0.74,
-        "best": 6.53,
+        "win_rate": 50.0,
+        "avg_return": -3.1,
+        "median_return": -3.1,
+        "best": 0.74,
         "worst": -6.94
       },
       "40d": {
-        "win_rate": 33.3,
-        "avg_return": -4.03,
-        "median_return": -2.95,
-        "best": 2.44,
+        "win_rate": 0.0,
+        "avg_return": -7.27,
+        "median_return": -7.27,
+        "best": -2.95,
         "worst": -11.58
       },
       "60d": {
         "win_rate": 0.0,
-        "avg_return": -9.41,
-        "median_return": -11.64,
-        "best": -1.93,
+        "avg_return": -13.15,
+        "median_return": -13.15,
+        "best": -11.64,
         "worst": -14.67
       },
       "name": "Astral",
@@ -1070,42 +1140,42 @@
       "symbol": "SUPREMEIND"
     },
     {
-      "n": 5,
+      "n": 4,
       "note": "Price-only; no point-in-time fundamentals",
       "5d": {
         "win_rate": 100.0,
-        "avg_return": 1.36,
-        "median_return": 0.47,
+        "avg_return": 1.69,
+        "median_return": 1.29,
         "best": 4.02,
-        "worst": 0.05
+        "worst": 0.17
       },
       "10d": {
-        "win_rate": 60.0,
-        "avg_return": 2.14,
-        "median_return": 2.39,
+        "win_rate": 75.0,
+        "avg_return": 3.42,
+        "median_return": 3.79,
         "best": 6.21,
-        "worst": -3.02
+        "worst": -0.08
       },
       "20d": {
-        "win_rate": 60.0,
-        "avg_return": 0.16,
-        "median_return": 0.32,
+        "win_rate": 75.0,
+        "avg_return": 1.04,
+        "median_return": 2.09,
         "best": 5.39,
         "worst": -5.43
       },
       "40d": {
-        "win_rate": 60.0,
-        "avg_return": -0.56,
-        "median_return": 1.25,
+        "win_rate": 75.0,
+        "avg_return": 1.61,
+        "median_return": 2.02,
         "best": 6.31,
-        "worst": -9.24
+        "worst": -3.92
       },
       "60d": {
         "win_rate": 100.0,
-        "avg_return": 13.4,
-        "median_return": 14.54,
+        "avg_return": 15.72,
+        "median_return": 15.99,
         "best": 21.02,
-        "worst": 4.14
+        "worst": 9.88
       },
       "name": "Sona BLW Precision Forgings",
       "symbol": "SONACOMS"
@@ -1291,9 +1361,9 @@
         "worst": -11.87
       },
       "10d": {
-        "win_rate": 57.1,
+        "win_rate": 42.9,
         "avg_return": -1.45,
-        "median_return": 0.28,
+        "median_return": -0.28,
         "best": 5.99,
         "worst": -16.78
       },
@@ -1375,8 +1445,43 @@
       "symbol": "GREAVESCOT"
     },
     {
-      "n": 0,
-      "note": "No qualifying signals",
+      "n": 1,
+      "note": "Price-only; no point-in-time fundamentals",
+      "5d": {
+        "win_rate": 0.0,
+        "avg_return": -4.87,
+        "median_return": -4.87,
+        "best": -4.87,
+        "worst": -4.87
+      },
+      "10d": {
+        "win_rate": 0.0,
+        "avg_return": -3.09,
+        "median_return": -3.09,
+        "best": -3.09,
+        "worst": -3.09
+      },
+      "20d": {
+        "win_rate": 100.0,
+        "avg_return": 3.23,
+        "median_return": 3.23,
+        "best": 3.23,
+        "worst": 3.23
+      },
+      "40d": {
+        "win_rate": 0.0,
+        "avg_return": -3.41,
+        "median_return": -3.41,
+        "best": -3.41,
+        "worst": -3.41
+      },
+      "60d": {
+        "win_rate": 100.0,
+        "avg_return": 25.93,
+        "median_return": 25.93,
+        "best": 25.93,
+        "worst": 25.93
+      },
       "name": "Marksans Pharma",
       "symbol": "MARKSANS"
     },
@@ -1446,40 +1551,40 @@
       "symbol": "KIMS"
     },
     {
-      "n": 5,
+      "n": 4,
       "note": "Price-only; no point-in-time fundamentals",
       "5d": {
-        "win_rate": 40.0,
-        "avg_return": 1.04,
-        "median_return": -0.81,
-        "best": 7.63,
+        "win_rate": 25.0,
+        "avg_return": -0.61,
+        "median_return": -1.05,
+        "best": 7.57,
         "worst": -7.91
       },
       "10d": {
-        "win_rate": 20.0,
-        "avg_return": -0.23,
-        "median_return": -0.88,
+        "win_rate": 25.0,
+        "avg_return": -0.07,
+        "median_return": -1.91,
         "best": 11.02,
         "worst": -7.46
       },
       "20d": {
-        "win_rate": 20.0,
-        "avg_return": -3.63,
-        "median_return": -4.47,
+        "win_rate": 25.0,
+        "avg_return": -2.93,
+        "median_return": -4.23,
         "best": 2.77,
-        "worst": -6.42
+        "worst": -6.03
       },
       "40d": {
         "win_rate": 100.0,
-        "avg_return": 22.71,
-        "median_return": 25.84,
+        "avg_return": 21.92,
+        "median_return": 21.82,
         "best": 26.52,
         "worst": 17.54
       },
       "60d": {
         "win_rate": 100.0,
-        "avg_return": 13.86,
-        "median_return": 18.38,
+        "avg_return": 12.72,
+        "median_return": 11.43,
         "best": 25.4,
         "worst": 2.63
       },
