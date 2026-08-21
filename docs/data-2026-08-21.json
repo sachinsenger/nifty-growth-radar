@@ -1,6 +1,6 @@
 {
   "date": "2026-08-21",
-  "generated_utc": "2026-08-21T04:02:16.566920+00:00",
+  "generated_utc": "2026-08-21T06:10:52.507625+00:00",
   "market_regime": "Breadth proxy 11/20 above EMA50",
   "stocks": [
     {
@@ -59,7 +59,7 @@
         "breakout50": true
       },
       "fundamentals": {
-        "pe": 48.0,
+        "pe": 47.8,
         "pb": null,
         "roe": 37.4,
         "roce": 42.0,
@@ -145,7 +145,7 @@
         "breakout50": true
       },
       "fundamentals": {
-        "pe": 43.2,
+        "pe": 43.4,
         "pb": null,
         "roe": 21.4,
         "roce": 23.5,
@@ -231,7 +231,7 @@
         "breakout50": false
       },
       "fundamentals": {
-        "pe": 28.3,
+        "pe": 27.7,
         "pb": null,
         "roe": 15.2,
         "roce": 18.8,
@@ -486,7 +486,7 @@
         "breakout50": false
       },
       "fundamentals": {
-        "pe": 60.4,
+        "pe": 60.2,
         "pb": null,
         "roe": 21.2,
         "roce": 26.5,
@@ -657,7 +657,7 @@
         "breakout50": false
       },
       "fundamentals": {
-        "pe": 77.2,
+        "pe": 76.6,
         "pb": null,
         "roe": 37.7,
         "roce": 20.5,
@@ -743,7 +743,7 @@
         "breakout50": false
       },
       "fundamentals": {
-        "pe": 69.7,
+        "pe": 69.3,
         "pb": null,
         "roe": 11.3,
         "roce": 14.2,
@@ -829,7 +829,7 @@
         "breakout50": true
       },
       "fundamentals": {
-        "pe": 48.4,
+        "pe": 48.6,
         "pb": null,
         "roe": 25.3,
         "roce": 31.6,
@@ -915,7 +915,7 @@
         "breakout50": false
       },
       "fundamentals": {
-        "pe": 38.0,
+        "pe": 38.9,
         "pb": null,
         "roe": 16.3,
         "roce": 13.3,
@@ -1001,7 +1001,7 @@
         "breakout50": false
       },
       "fundamentals": {
-        "pe": 30.2,
+        "pe": 30.0,
         "pb": null,
         "roe": 32.6,
         "roce": 45.3,
@@ -1086,7 +1086,7 @@
         "breakout50": false
       },
       "fundamentals": {
-        "pe": 89.6,
+        "pe": 90.9,
         "pb": null,
         "roe": 32.6,
         "roce": 38.1,
@@ -1172,7 +1172,7 @@
         "breakout50": false
       },
       "fundamentals": {
-        "pe": 18.9,
+        "pe": 19.0,
         "pb": null,
         "roe": 11.6,
         "roce": 6.39,
@@ -1428,7 +1428,7 @@
         "breakout50": false
       },
       "fundamentals": {
-        "pe": 31.9,
+        "pe": 31.8,
         "pb": null,
         "roe": 15.9,
         "roce": 14.6,
@@ -1514,7 +1514,7 @@
         "breakout50": false
       },
       "fundamentals": {
-        "pe": 54.4,
+        "pe": 53.4,
         "pb": null,
         "roe": 17.5,
         "roce": 14.6,
@@ -1684,7 +1684,7 @@
         "breakout50": false
       },
       "fundamentals": {
-        "pe": 36.2,
+        "pe": 36.3,
         "pb": null,
         "roe": 29.2,
         "roce": 36.0,
@@ -1770,7 +1770,7 @@
         "breakout50": false
       },
       "fundamentals": {
-        "pe": 16.0,
+        "pe": 15.9,
         "pb": null,
         "roe": 32.7,
         "roce": 29.3,
@@ -1855,7 +1855,7 @@
         "breakout50": false
       },
       "fundamentals": {
-        "pe": 11.6,
+        "pe": 11.5,
         "pb": null,
         "roe": 15.4,
         "roce": 6.13,
@@ -1940,7 +1940,7 @@
         "breakout50": false
       },
       "fundamentals": {
-        "pe": 19.9,
+        "pe": 20.0,
         "pb": null,
         "roe": 11.4,
         "roce": 6.98,
@@ -2025,7 +2025,7 @@
         "breakout50": false
       },
       "fundamentals": {
-        "pe": 10.6,
+        "pe": 10.7,
         "pb": null,
         "roe": 30.9,
         "roce": 15.8,
@@ -2110,7 +2110,7 @@
         "breakout50": false
       },
       "fundamentals": {
-        "pe": 44.9,
+        "pe": 45.2,
         "pb": null,
         "roe": 27.2,
         "roce": 34.4,
@@ -2195,7 +2195,7 @@
         "breakout50": false
       },
       "fundamentals": {
-        "pe": 22.4,
+        "pe": 22.2,
         "pb": null,
         "roe": 20.3,
         "roce": 15.1,
@@ -2364,7 +2364,7 @@
         "breakout50": false
       },
       "fundamentals": {
-        "pe": 69.6,
+        "pe": 69.7,
         "pb": null,
         "roe": 13.8,
         "roce": 19.2,
@@ -2532,7 +2532,7 @@
         "breakout50": false
       },
       "fundamentals": {
-        "pe": 109.0,
+        "pe": 110.0,
         "pb": null,
         "roe": 9.75,
         "roce": 10.3,
@@ -2615,7 +2615,7 @@
         "breakout50": false
       },
       "fundamentals": {
-        "pe": 32.7,
+        "pe": 32.8,
         "pb": null,
         "roe": 8.74,
         "roce": 11.0,
@@ -2700,7 +2700,7 @@
         "breakout50": false
       },
       "fundamentals": {
-        "pe": 8.86,
+        "pe": 8.88,
         "pb": null,
         "roe": 37.8,
         "roce": 35.1,
@@ -2785,7 +2785,7 @@
         "breakout50": false
       },
       "fundamentals": {
-        "pe": 18.1,
+        "pe": 18.2,
         "pb": null,
         "roe": 15.9,
         "roce": 7.18,
@@ -2956,7 +2956,7 @@
         "breakout50": false
       },
       "fundamentals": {
-        "pe": 59.7,
+        "pe": 61.3,
         "pb": null,
         "roe": 24.5,
         "roce": 32.0,
@@ -3377,7 +3377,7 @@
         "breakout50": false
       },
       "fundamentals": {
-        "pe": 30.3,
+        "pe": 30.0,
         "pb": null,
         "roe": 14.3,
         "roce": 18.9,
@@ -3546,7 +3546,7 @@
         "breakout50": false
       },
       "fundamentals": {
-        "pe": 48.1,
+        "pe": 47.5,
         "pb": null,
         "roe": 23.0,
         "roce": 33.2,
@@ -3628,7 +3628,7 @@
         "breakout50": false
       },
       "fundamentals": {
-        "pe": 45.1,
+        "pe": 45.4,
         "pb": null,
         "roe": 8.1,
         "roce": 10.1,
@@ -3713,7 +3713,7 @@
         "breakout50": false
       },
       "fundamentals": {
-        "pe": 36.3,
+        "pe": 35.9,
         "pb": null,
         "roe": 16.0,
         "roce": 20.5,
@@ -3799,7 +3799,7 @@
         "breakout50": false
       },
       "fundamentals": {
-        "pe": 17.3,
+        "pe": 17.1,
         "pb": null,
         "roe": 29.3,
         "roce": 38.9,
@@ -3882,7 +3882,7 @@
         "breakout50": false
       },
       "fundamentals": {
-        "pe": 96.5,
+        "pe": 96.2,
         "pb": null,
         "roe": 12.0,
         "roce": 12.6,
@@ -3967,7 +3967,7 @@
         "breakout50": false
       },
       "fundamentals": {
-        "pe": 59.0,
+        "pe": 58.2,
         "pb": null,
         "roe": 30.2,
         "roce": 39.5,
@@ -4053,7 +4053,7 @@
         "breakout50": false
       },
       "fundamentals": {
-        "pe": 42.9,
+        "pe": 43.2,
         "pb": null,
         "roe": 20.5,
         "roce": 15.5,
@@ -4136,7 +4136,7 @@
         "breakout50": false
       },
       "fundamentals": {
-        "pe": 159.0,
+        "pe": 158.0,
         "pb": null,
         "roe": 11.3,
         "roce": 9.5,
@@ -4221,7 +4221,7 @@
         "breakout50": false
       },
       "fundamentals": {
-        "pe": 15.4,
+        "pe": 15.5,
         "pb": null,
         "roe": 51.8,
         "roce": 63.0,
@@ -4388,7 +4388,7 @@
         "breakout50": false
       },
       "fundamentals": {
-        "pe": 283.0,
+        "pe": 284.0,
         "pb": null,
         "roe": 1.87,
         "roce": 2.82,
@@ -4474,7 +4474,7 @@
         "breakout50": false
       },
       "fundamentals": {
-        "pe": 43.3,
+        "pe": 42.9,
         "pb": null,
         "roe": 31.0,
         "roce": 28.4,
@@ -4559,7 +4559,7 @@
         "breakout50": false
       },
       "fundamentals": {
-        "pe": 21.5,
+        "pe": 21.4,
         "pb": null,
         "roe": 29.2,
         "roce": 36.1,
@@ -4643,7 +4643,7 @@
         "breakout50": false
       },
       "fundamentals": {
-        "pe": 11.8,
+        "pe": 11.9,
         "pb": null,
         "roe": 15.1,
         "roce": 8.92,
@@ -4728,7 +4728,7 @@
         "breakout50": false
       },
       "fundamentals": {
-        "pe": 37.6,
+        "pe": 37.8,
         "pb": null,
         "roe": 36.3,
         "roce": 47.0,
@@ -4812,7 +4812,7 @@
         "breakout50": false
       },
       "fundamentals": {
-        "pe": 64.8,
+        "pe": 64.5,
         "pb": null,
         "roe": 14.7,
         "roce": 14.7,
@@ -4897,7 +4897,7 @@
         "breakout50": false
       },
       "fundamentals": {
-        "pe": 13.8,
+        "pe": 13.9,
         "pb": null,
         "roe": 17.3,
         "roce": 22.8,
