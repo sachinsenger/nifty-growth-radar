@@ -55,41 +55,41 @@
       "symbol": "ICICIBANK"
     },
     {
-      "n": 3,
+      "n": 4,
       "note": "Price-only; no point-in-time fundamentals",
       "5d": {
-        "win_rate": 66.7,
-        "avg_return": 1.13,
-        "median_return": 1.89,
+        "win_rate": 50.0,
+        "avg_return": 0.27,
+        "median_return": 0.01,
         "best": 3.38,
-        "worst": -1.87
+        "worst": -2.33
       },
       "10d": {
-        "win_rate": 66.7,
-        "avg_return": 2.01,
-        "median_return": 3.01,
+        "win_rate": 50.0,
+        "avg_return": 0.67,
+        "median_return": 1.48,
         "best": 3.08,
-        "worst": -0.05
+        "worst": -3.35
       },
       "20d": {
-        "win_rate": 66.7,
-        "avg_return": 3.11,
-        "median_return": 2.96,
+        "win_rate": 75.0,
+        "avg_return": 2.97,
+        "median_return": 2.74,
         "best": 6.82,
         "worst": -0.44
       },
       "40d": {
-        "win_rate": 66.7,
-        "avg_return": 1.66,
-        "median_return": 2.46,
-        "best": 2.87,
+        "win_rate": 75.0,
+        "avg_return": 3.62,
+        "median_return": 2.66,
+        "best": 9.52,
         "worst": -0.36
       },
       "60d": {
-        "win_rate": 33.3,
-        "avg_return": -2.51,
-        "median_return": -1.41,
-        "best": 0.74,
+        "win_rate": 50.0,
+        "avg_return": -0.51,
+        "median_return": -0.34,
+        "best": 5.47,
         "worst": -6.84
       },
       "name": "Bharti Airtel",
@@ -143,40 +143,40 @@
       "symbol": "INFY"
     },
     {
-      "n": 14,
+      "n": 15,
       "note": "Price-only; no point-in-time fundamentals",
       "5d": {
-        "win_rate": 78.6,
-        "avg_return": 0.97,
-        "median_return": 0.67,
+        "win_rate": 80.0,
+        "avg_return": 0.9,
+        "median_return": 0.62,
         "best": 5.42,
         "worst": -1.23
       },
       "10d": {
-        "win_rate": 92.9,
-        "avg_return": 3.03,
-        "median_return": 2.39,
+        "win_rate": 93.3,
+        "avg_return": 2.86,
+        "median_return": 2.29,
         "best": 10.95,
         "worst": -2.31
       },
       "20d": {
-        "win_rate": 71.4,
-        "avg_return": 3.37,
-        "median_return": 3.92,
+        "win_rate": 73.3,
+        "avg_return": 3.2,
+        "median_return": 3.28,
         "best": 15.02,
         "worst": -12.19
       },
       "40d": {
-        "win_rate": 71.4,
-        "avg_return": 1.18,
-        "median_return": 2.53,
+        "win_rate": 73.3,
+        "avg_return": 1.77,
+        "median_return": 2.57,
         "best": 11.72,
         "worst": -10.5
       },
       "60d": {
-        "win_rate": 78.6,
-        "avg_return": 3.07,
-        "median_return": 7.72,
+        "win_rate": 80.0,
+        "avg_return": 3.61,
+        "median_return": 9.46,
         "best": 12.96,
         "worst": -19.22
       },
@@ -243,41 +243,41 @@
       "symbol": "LT"
     },
     {
-      "n": 3,
+      "n": 5,
       "note": "Price-only; no point-in-time fundamentals",
       "5d": {
         "win_rate": 0.0,
-        "avg_return": -2.32,
-        "median_return": -2.46,
-        "best": -1.6,
+        "avg_return": -1.79,
+        "median_return": -1.91,
+        "best": -0.05,
         "worst": -2.9
       },
       "10d": {
-        "win_rate": 0.0,
-        "avg_return": -1.92,
-        "median_return": -2.22,
-        "best": -0.69,
+        "win_rate": 40.0,
+        "avg_return": -0.61,
+        "median_return": -0.69,
+        "best": 1.63,
         "worst": -2.86
       },
       "20d": {
         "win_rate": 100.0,
-        "avg_return": 2.47,
+        "avg_return": 2.6,
         "median_return": 2.1,
-        "best": 3.47,
-        "worst": 1.83
+        "best": 4.46,
+        "worst": 1.14
       },
       "40d": {
-        "win_rate": 33.3,
-        "avg_return": -4.43,
-        "median_return": -2.3,
-        "best": 4.27,
+        "win_rate": 60.0,
+        "avg_return": -0.31,
+        "median_return": 3.73,
+        "best": 8.02,
         "worst": -15.26
       },
       "60d": {
-        "win_rate": 33.3,
-        "avg_return": -2.32,
-        "median_return": -3.38,
-        "best": 3.87,
+        "win_rate": 60.0,
+        "avg_return": 0.64,
+        "median_return": 3.87,
+        "best": 5.5,
         "worst": -7.45
       },
       "name": "Axis Bank",
@@ -419,41 +419,41 @@
       "symbol": "HCLTECH"
     },
     {
-      "n": 3,
+      "n": 4,
       "note": "Price-only; no point-in-time fundamentals",
       "5d": {
-        "win_rate": 33.3,
-        "avg_return": -2.08,
-        "median_return": -4.22,
-        "best": 2.4,
+        "win_rate": 50.0,
+        "avg_return": -0.93,
+        "median_return": -0.91,
+        "best": 2.54,
         "worst": -4.43
       },
       "10d": {
-        "win_rate": 33.3,
-        "avg_return": -1.22,
-        "median_return": -0.74,
-        "best": 0.88,
+        "win_rate": 50.0,
+        "avg_return": -0.2,
+        "median_return": 0.07,
+        "best": 2.88,
         "worst": -3.82
       },
       "20d": {
-        "win_rate": 33.3,
-        "avg_return": -0.25,
-        "median_return": -0.15,
-        "best": 0.52,
+        "win_rate": 50.0,
+        "avg_return": 1.68,
+        "median_return": 0.19,
+        "best": 7.47,
         "worst": -1.14
       },
       "40d": {
         "win_rate": 100.0,
-        "avg_return": 5.17,
-        "median_return": 6.3,
+        "avg_return": 5.1,
+        "median_return": 5.59,
         "best": 7.75,
         "worst": 1.47
       },
       "60d": {
-        "win_rate": 66.7,
-        "avg_return": -0.26,
-        "median_return": 4.02,
-        "best": 4.59,
+        "win_rate": 75.0,
+        "avg_return": 2.82,
+        "median_return": 4.3,
+        "best": 12.05,
         "worst": -9.38
       },
       "name": "NTPC",
@@ -542,40 +542,40 @@
       "symbol": "TITAN"
     },
     {
-      "n": 6,
+      "n": 7,
       "note": "Price-only; no point-in-time fundamentals",
       "5d": {
-        "win_rate": 66.7,
-        "avg_return": 0.89,
-        "median_return": 4.38,
+        "win_rate": 71.4,
+        "avg_return": 1.4,
+        "median_return": 4.43,
         "best": 8.95,
         "worst": -13.61
       },
       "10d": {
-        "win_rate": 66.7,
-        "avg_return": 0.05,
-        "median_return": 1.87,
+        "win_rate": 71.4,
+        "avg_return": 0.62,
+        "median_return": 2.69,
         "best": 9.46,
         "worst": -13.33
       },
       "20d": {
-        "win_rate": 66.7,
-        "avg_return": 6.81,
-        "median_return": 6.14,
+        "win_rate": 57.1,
+        "avg_return": 4.84,
+        "median_return": 0.09,
         "best": 23.51,
         "worst": -10.61
       },
       "40d": {
-        "win_rate": 66.7,
-        "avg_return": 5.56,
-        "median_return": 2.37,
+        "win_rate": 57.1,
+        "avg_return": 4.35,
+        "median_return": 0.66,
         "best": 23.81,
         "worst": -12.07
       },
       "60d": {
-        "win_rate": 66.7,
-        "avg_return": 7.68,
-        "median_return": 15.61,
+        "win_rate": 71.4,
+        "avg_return": 7.21,
+        "median_return": 14.79,
         "best": 22.51,
         "worst": -16.42
       },
@@ -583,8 +583,43 @@
       "symbol": "BSE"
     },
     {
-      "n": 0,
-      "note": "No qualifying signals",
+      "n": 1,
+      "note": "Price-only; no point-in-time fundamentals",
+      "5d": {
+        "win_rate": 0.0,
+        "avg_return": -1.96,
+        "median_return": -1.96,
+        "best": -1.96,
+        "worst": -1.96
+      },
+      "10d": {
+        "win_rate": 0.0,
+        "avg_return": -10.04,
+        "median_return": -10.04,
+        "best": -10.04,
+        "worst": -10.04
+      },
+      "20d": {
+        "win_rate": 100.0,
+        "avg_return": 6.55,
+        "median_return": 6.55,
+        "best": 6.55,
+        "worst": 6.55
+      },
+      "40d": {
+        "win_rate": 100.0,
+        "avg_return": 3.42,
+        "median_return": 3.42,
+        "best": 3.42,
+        "worst": 3.42
+      },
+      "60d": {
+        "win_rate": 100.0,
+        "avg_return": 13.83,
+        "median_return": 13.83,
+        "best": 13.83,
+        "worst": 13.83
+      },
       "name": "Oracle Financial Services Software",
       "symbol": "OFSS"
     },
@@ -712,81 +747,81 @@
       "symbol": "DIXON"
     },
     {
-      "n": 5,
+      "n": 6,
       "note": "Price-only; no point-in-time fundamentals",
       "5d": {
-        "win_rate": 80.0,
-        "avg_return": 3.15,
-        "median_return": 3.85,
+        "win_rate": 66.7,
+        "avg_return": 1.96,
+        "median_return": 2.71,
         "best": 7.62,
-        "worst": -1.38
+        "worst": -3.98
       },
       "10d": {
-        "win_rate": 80.0,
-        "avg_return": 1.94,
-        "median_return": 2.38,
+        "win_rate": 66.7,
+        "avg_return": 0.31,
+        "median_return": 1.89,
         "best": 5.35,
-        "worst": -3.4
+        "worst": -7.81
       },
       "20d": {
-        "win_rate": 40.0,
-        "avg_return": -0.19,
-        "median_return": -0.0,
+        "win_rate": 33.3,
+        "avg_return": -1.22,
+        "median_return": -2.33,
         "best": 6.38,
-        "worst": -5.42
+        "worst": -6.4
       },
       "40d": {
-        "win_rate": 100.0,
-        "avg_return": 7.64,
-        "median_return": 8.05,
+        "win_rate": 83.3,
+        "avg_return": 5.18,
+        "median_return": 7.6,
         "best": 10.28,
-        "worst": 4.45
+        "worst": -7.08
       },
       "60d": {
-        "win_rate": 40.0,
-        "avg_return": 2.74,
-        "median_return": -1.3,
+        "win_rate": 33.3,
+        "avg_return": -0.26,
+        "median_return": -2.83,
         "best": 14.05,
-        "worst": -5.65
+        "worst": -15.26
       },
       "name": "Cummins India",
       "symbol": "CUMMINSIND"
     },
     {
-      "n": 3,
+      "n": 7,
       "note": "Price-only; no point-in-time fundamentals",
       "5d": {
-        "win_rate": 66.7,
-        "avg_return": 1.61,
+        "win_rate": 85.7,
+        "avg_return": 2.19,
         "median_return": 2.99,
-        "best": 3.09,
+        "best": 6.05,
         "worst": -1.26
       },
       "10d": {
-        "win_rate": 100.0,
-        "avg_return": 1.58,
-        "median_return": 0.68,
-        "best": 3.92,
-        "worst": 0.15
+        "win_rate": 85.7,
+        "avg_return": 4.53,
+        "median_return": 3.92,
+        "best": 13.12,
+        "worst": -3.58
       },
       "20d": {
-        "win_rate": 66.7,
-        "avg_return": 3.71,
+        "win_rate": 85.7,
+        "avg_return": 3.25,
         "median_return": 2.98,
         "best": 9.17,
         "worst": -1.01
       },
       "40d": {
-        "win_rate": 66.7,
-        "avg_return": 8.05,
-        "median_return": 7.68,
+        "win_rate": 71.4,
+        "avg_return": 3.4,
+        "median_return": 1.21,
         "best": 21.12,
-        "worst": -4.64
+        "worst": -7.18
       },
       "60d": {
-        "win_rate": 33.3,
-        "avg_return": -0.66,
-        "median_return": -3.84,
+        "win_rate": 14.3,
+        "avg_return": -3.3,
+        "median_return": -4.02,
         "best": 15.87,
         "worst": -13.99
       },
@@ -1046,40 +1081,40 @@
       "symbol": "ASTRAL"
     },
     {
-      "n": 4,
+      "n": 5,
       "note": "Price-only; no point-in-time fundamentals",
       "5d": {
-        "win_rate": 50.0,
-        "avg_return": 0.18,
-        "median_return": 0.56,
+        "win_rate": 60.0,
+        "avg_return": 0.19,
+        "median_return": 0.23,
         "best": 2.44,
         "worst": -2.85
       },
       "10d": {
-        "win_rate": 25.0,
-        "avg_return": 1.44,
-        "median_return": -0.98,
+        "win_rate": 20.0,
+        "avg_return": 1.11,
+        "median_return": -0.48,
         "best": 9.89,
         "worst": -2.18
       },
       "20d": {
-        "win_rate": 50.0,
-        "avg_return": 1.24,
-        "median_return": 0.07,
+        "win_rate": 60.0,
+        "avg_return": 1.69,
+        "median_return": 3.49,
         "best": 9.37,
         "worst": -4.55
       },
       "40d": {
-        "win_rate": 50.0,
-        "avg_return": 1.36,
-        "median_return": -0.4,
+        "win_rate": 60.0,
+        "avg_return": 1.13,
+        "median_return": 0.18,
         "best": 13.43,
         "worst": -7.17
       },
       "60d": {
-        "win_rate": 50.0,
-        "avg_return": 0.33,
-        "median_return": -0.78,
+        "win_rate": 60.0,
+        "avg_return": 2.02,
+        "median_return": 0.22,
         "best": 14.17,
         "worst": -11.29
       },
@@ -1228,40 +1263,40 @@
       "symbol": "ZENSARTECH"
     },
     {
-      "n": 6,
+      "n": 7,
       "note": "Price-only; no point-in-time fundamentals",
       "5d": {
         "win_rate": 100.0,
-        "avg_return": 11.88,
-        "median_return": 11.62,
+        "avg_return": 11.16,
+        "median_return": 8.48,
         "best": 21.65,
         "worst": 3.66
       },
       "10d": {
-        "win_rate": 66.7,
-        "avg_return": 12.17,
-        "median_return": 9.06,
+        "win_rate": 71.4,
+        "avg_return": 14.26,
+        "median_return": 10.83,
         "best": 31.99,
         "worst": -3.07
       },
       "20d": {
         "win_rate": 100.0,
-        "avg_return": 46.05,
-        "median_return": 48.49,
-        "best": 57.1,
+        "avg_return": 48.28,
+        "median_return": 50.7,
+        "best": 61.66,
         "worst": 28.03
       },
       "40d": {
         "win_rate": 100.0,
-        "avg_return": 68.99,
-        "median_return": 63.58,
+        "avg_return": 73.03,
+        "median_return": 68.27,
         "best": 97.91,
         "worst": 51.62
       },
       "60d": {
         "win_rate": 100.0,
-        "avg_return": 61.42,
-        "median_return": 48.5,
+        "avg_return": 71.59,
+        "median_return": 53.57,
         "best": 133.62,
         "worst": 37.08
       },
@@ -1310,41 +1345,41 @@
       "symbol": "AEGISLOG"
     },
     {
-      "n": 3,
+      "n": 5,
       "note": "Price-only; no point-in-time fundamentals",
       "5d": {
-        "win_rate": 33.3,
-        "avg_return": -1.39,
-        "median_return": -0.18,
+        "win_rate": 20.0,
+        "avg_return": -3.57,
+        "median_return": -4.18,
         "best": 0.2,
-        "worst": -4.18
+        "worst": -7.62
       },
       "10d": {
-        "win_rate": 33.3,
-        "avg_return": -4.2,
-        "median_return": -3.02,
+        "win_rate": 20.0,
+        "avg_return": -5.61,
+        "median_return": -5.51,
         "best": 0.53,
         "worst": -10.1
       },
       "20d": {
         "win_rate": 0.0,
-        "avg_return": -6.51,
-        "median_return": -4.69,
-        "best": -3.6,
+        "avg_return": -4.85,
+        "median_return": -3.97,
+        "best": -0.76,
         "worst": -11.24
       },
       "40d": {
-        "win_rate": 0.0,
-        "avg_return": -15.31,
-        "median_return": -14.47,
-        "best": -11.56,
+        "win_rate": 40.0,
+        "avg_return": -6.26,
+        "median_return": -11.56,
+        "best": 7.64,
         "worst": -19.9
       },
       "60d": {
-        "win_rate": 0.0,
-        "avg_return": -23.73,
-        "median_return": -23.11,
-        "best": -22.78,
+        "win_rate": 20.0,
+        "avg_return": -12.59,
+        "median_return": -22.78,
+        "best": 9.1,
         "worst": -25.29
       },
       "name": "Neuland Laboratories",
@@ -1439,8 +1474,43 @@
       "symbol": "ECLERX"
     },
     {
-      "n": 0,
-      "note": "No qualifying signals",
+      "n": 1,
+      "note": "Price-only; no point-in-time fundamentals",
+      "5d": {
+        "win_rate": 0.0,
+        "avg_return": -11.7,
+        "median_return": -11.7,
+        "best": -11.7,
+        "worst": -11.7
+      },
+      "10d": {
+        "win_rate": 0.0,
+        "avg_return": -7.36,
+        "median_return": -7.36,
+        "best": -7.36,
+        "worst": -7.36
+      },
+      "20d": {
+        "win_rate": 0.0,
+        "avg_return": -11.85,
+        "median_return": -11.85,
+        "best": -11.85,
+        "worst": -11.85
+      },
+      "40d": {
+        "win_rate": 0.0,
+        "avg_return": -18.08,
+        "median_return": -18.08,
+        "best": -18.08,
+        "worst": -18.08
+      },
+      "60d": {
+        "win_rate": 0.0,
+        "avg_return": -31.26,
+        "median_return": -31.26,
+        "best": -31.26,
+        "worst": -31.26
+      },
       "name": "Greaves Cotton",
       "symbol": "GREAVESCOT"
     },
@@ -1486,8 +1556,43 @@
       "symbol": "MARKSANS"
     },
     {
-      "n": 0,
-      "note": "No qualifying signals",
+      "n": 1,
+      "note": "Price-only; no point-in-time fundamentals",
+      "5d": {
+        "win_rate": 0.0,
+        "avg_return": -0.67,
+        "median_return": -0.67,
+        "best": -0.67,
+        "worst": -0.67
+      },
+      "10d": {
+        "win_rate": 100.0,
+        "avg_return": 14.54,
+        "median_return": 14.54,
+        "best": 14.54,
+        "worst": 14.54
+      },
+      "20d": {
+        "win_rate": 100.0,
+        "avg_return": 20.52,
+        "median_return": 20.52,
+        "best": 20.52,
+        "worst": 20.52
+      },
+      "40d": {
+        "win_rate": 100.0,
+        "avg_return": 24.86,
+        "median_return": 24.86,
+        "best": 24.86,
+        "worst": 24.86
+      },
+      "60d": {
+        "win_rate": 100.0,
+        "avg_return": 16.39,
+        "median_return": 16.39,
+        "best": 16.39,
+        "worst": 16.39
+      },
       "name": "Balaji Amines",
       "symbol": "BALAMINES"
     },
@@ -1551,42 +1656,42 @@
       "symbol": "KIMS"
     },
     {
-      "n": 4,
+      "n": 7,
       "note": "Price-only; no point-in-time fundamentals",
       "5d": {
-        "win_rate": 25.0,
-        "avg_return": -0.61,
-        "median_return": -1.05,
-        "best": 7.57,
+        "win_rate": 42.9,
+        "avg_return": 0.89,
+        "median_return": -0.81,
+        "best": 7.63,
         "worst": -7.91
       },
       "10d": {
-        "win_rate": 25.0,
-        "avg_return": -0.07,
-        "median_return": -1.91,
+        "win_rate": 14.3,
+        "avg_return": -0.94,
+        "median_return": -1.26,
         "best": 11.02,
         "worst": -7.46
       },
       "20d": {
-        "win_rate": 25.0,
-        "avg_return": -2.93,
-        "median_return": -4.23,
+        "win_rate": 14.3,
+        "avg_return": -6.83,
+        "median_return": -6.03,
         "best": 2.77,
-        "worst": -6.03
+        "worst": -16.34
       },
       "40d": {
-        "win_rate": 100.0,
-        "avg_return": 21.92,
-        "median_return": 21.82,
+        "win_rate": 71.4,
+        "avg_return": 12.31,
+        "median_return": 17.68,
         "best": 26.52,
-        "worst": 17.54
+        "worst": -15.6
       },
       "60d": {
-        "win_rate": 100.0,
-        "avg_return": 12.72,
-        "median_return": 11.43,
+        "win_rate": 71.4,
+        "avg_return": 7.76,
+        "median_return": 4.24,
         "best": 25.4,
-        "worst": 2.63
+        "worst": -8.39
       },
       "name": "Data Patterns",
       "symbol": "DATAPATTNS"
