@@ -15,7 +15,6 @@ from __future__ import annotations
 from datetime import datetime
 from urllib.parse import quote
 
-import numpy as np
 import pandas as pd
 import requests
 
@@ -25,7 +24,7 @@ HEADERS = {
     "Accept": "application/json,text/plain,*/*",
 }
 
-YAHOO_SYMBOLS = {"NIFTY": "%5ENSEI", "BANKNIFTY": "%5ENSEBANK"}
+YAHOO_SYMBOLS = {"NIFTY": "^NSEI", "BANKNIFTY": "^NSEBANK"}
 
 
 def _session():
@@ -37,7 +36,7 @@ def _session():
 def fetch_15m(symbol="NIFTY", range_days=60):
     """Fetch Yahoo 15m candles and return an IST-indexed dataframe."""
     yahoo = YAHOO_SYMBOLS.get(symbol, symbol)
-    url = f"https://query1.finance.yahoo.com/v8/finance/chart/{yahoo}"
+    url = f"https://query1.finance.yahoo.com/v8/finance/chart/{quote(yahoo, safe='')}"
     params = {"interval": "15m", "range": f"{range_days}d", "events": "history", "includeAdjustedClose": "true"}
     r = _session().get(url, params=params, timeout=20)
     r.raise_for_status()
@@ -58,7 +57,7 @@ def fetch_15m(symbol="NIFTY", range_days=60):
     return df
 
 
-def orb_backtest(df, opening_minutes=15, target_r=1.0):
+def orb_backtest(df, target_r=1.0):
     """Backtest one opening-range breakout per session.
 
     Entry is the first 15m candle close beyond the opening-range high/low.
@@ -99,23 +98,19 @@ def orb_backtest(df, opening_minutes=15, target_r=1.0):
         outcome = "EOD"
         r_multiple = None
         for _, bar in forward.iterrows():
-            hi, lo, close = float(bar["High"]), float(bar["Low"]), float(bar["Close"])
+            hi, lo = float(bar["High"]), float(bar["Low"])
             if side == "LONG":
-                hit_target = hi >= target
-                hit_stop = lo <= stop
-                if hit_stop:
+                if lo <= stop:
                     outcome, r_multiple = "STOP", -1.0
                     break
-                if hit_target:
+                if hi >= target:
                     outcome, r_multiple = "TARGET", target_r
                     break
             else:
-                hit_target = lo <= target
-                hit_stop = hi >= stop
-                if hit_stop:
+                if hi >= stop:
                     outcome, r_multiple = "STOP", -1.0
                     break
-                if hit_target:
+                if lo <= target:
                     outcome, r_multiple = "TARGET", target_r
                     break
         if r_multiple is None:
@@ -176,15 +171,11 @@ def _parse_yahoo_option_contracts(payload):
 
 
 def fetch_option_chain(symbol="NIFTY"):
-    """Fetch the current Yahoo option chain for NIFTY/BANKNIFTY.
-
-    Yahoo may expose the underlying page but no NSE option contracts; in that
-    case the function returns an explicit unavailable status.
-    """
+    """Fetch the current Yahoo option chain for NIFTY/BANKNIFTY."""
     yahoo = YAHOO_SYMBOLS.get(symbol)
     if not yahoo:
         raise ValueError(f"Unsupported option symbol: {symbol}")
-    url = f"https://query2.finance.yahoo.com/v7/finance/options/{quote(yahoo, safe='') }"
+    url = f"https://query2.finance.yahoo.com/v7/finance/options/{quote(yahoo, safe='')}"
     r = _session().get(url, timeout=20)
     r.raise_for_status()
     parsed = _parse_yahoo_option_contracts(r.json())
