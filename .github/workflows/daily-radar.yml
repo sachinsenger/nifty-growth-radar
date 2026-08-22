@@ -73,43 +73,47 @@ jobs:
       - name: Run technical historical research
         run: python backtest_report.py
 
+      - name: Generate Nifty & F&O research page
+        run: python research_engine.py
+
       - name: Generate daily global and Indian market news
         run: python news_feed.py
 
-      - name: Integrate news link into dashboard
+      - name: Integrate news and research links into dashboard
         run: python integrate_news.py
 
-      - name: Archive timestamped dashboard and news
+      - name: Archive timestamped dashboard, research and news
         run: |
           mkdir -p docs
           STAMP_IST=$(TZ=Asia/Kolkata date +%Y-%m-%d-%H-%M)
           cp docs/index.html "docs/${STAMP_IST}.html"
+          if [ -s docs/research.html ]; then cp docs/research.html "docs/research-${STAMP_IST}.html"; fi
           if [ -s docs/news.html ]; then
             cp docs/news.html "docs/news-${STAMP_IST}.html"
           else
             echo 'news.html was not generated; continuing with dashboard archive'
           fi
           echo "Archived dashboard: docs/${STAMP_IST}.html"
-          find docs -maxdepth 1 -type f -printf '%f %s bytes\n' | sort | tail -30
+          find docs -maxdepth 1 -type f -printf '%f %s bytes\n' | sort | tail -35
 
       - name: Show generation summary
         if: always()
         run: |
           test -s docs/index.html && echo 'HTML generated: docs/index.html' || echo 'HTML NOT generated'
+          test -s docs/research.html && echo 'Research generated: docs/research.html' || echo 'Research NOT generated'
           test -s docs/news.html && echo 'News generated: docs/news.html' || echo 'News NOT generated'
           test -s docs/backtest-latest.json && echo 'Backtest generated' || echo 'Backtest NOT generated'
-          find docs -maxdepth 1 -type f -printf '%f %s bytes\n' | sort | tail -30
+          find docs -maxdepth 1 -type f -printf '%f %s bytes\n' | sort | tail -35
 
       - name: Commit generated dashboards and research data
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          # Use one directory pathspec so optional file types cannot break git add.
           git add -A docs/
           if git diff --cached --quiet; then
             echo 'No generated-file changes to commit.'
           else
-            git commit -m "Update daily radar, market news and research snapshots"
+            git commit -m "Update daily radar, research and market news"
             git push
           fi
 
