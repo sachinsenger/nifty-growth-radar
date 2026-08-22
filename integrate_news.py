@@ -40,3 +40,4 @@ else:
 
 p.write_text(s, encoding='utf-8')
 print('Integrated daily news and research links into dashboard')
+# Research dashboard rebuild trigger: research_engine.py + research_v2.py generate docs/research.html.
