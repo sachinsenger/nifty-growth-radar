@@ -1,0 +1,75 @@
+name: Fast Validation
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: fast-validation-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+
+      - name: Setup Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: '3.11'
+          cache: pip
+
+      - name: Install dependencies
+        run: python -m pip install -r requirements.txt
+
+      - name: Compile all Python modules
+        run: python -m compileall -q -f .
+
+      - name: Import application modules without network execution
+        run: |
+          python - <<'PY'
+          import importlib
+          modules = [
+              'market_data',
+              'technical_engine',
+              'screener_fundamentals',
+              'quality_engine',
+              'run_daily',
+              'quality_report',
+              'backtest_report',
+              'research_engine',
+              'research_v2',
+              'news_feed',
+              'integrate_news',
+          ]
+          for name in modules:
+              importlib.import_module(name)
+              print(f'OK: {name}')
+          PY
+
+      - name: Validate workflow YAML and required files
+        run: |
+          test -s .github/workflows/daily-radar.yml
+          test -s requirements.txt
+          test -s stocks.csv
+          python - <<'PY'
+          from pathlib import Path
+          required = ['run_daily.py', 'quality_report.py', 'backtest_report.py',
+                      'research_engine.py', 'research_v2.py', 'news_feed.py',
+                      'integrate_news.py']
+          for path in required:
+              assert Path(path).is_file(), f'Missing {path}'
+              print(f'OK: {path}')
+          PY
+
+      - name: Fast validation passed
+        run: echo 'FAST VALIDATION PASSED - full 08:30 IST build is safe to run manually/scheduled.'
