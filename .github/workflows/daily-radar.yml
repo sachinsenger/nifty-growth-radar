@@ -1,8 +1,6 @@
 name: Daily Nifty Growth Radar
 
 on:
-  push:
-    branches: [main]
   schedule:
     - cron: '0 3 * * 1-5'    # 08:30 IST
   workflow_dispatch:
@@ -29,18 +27,15 @@ jobs:
         uses: actions/checkout@v6
         with:
           fetch-depth: 1
-
       - name: Setup Python
         uses: actions/setup-python@v6
         with:
           python-version: '3.11'
           cache: pip
-
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
           python -m pip install -r requirements.txt
-
       - name: Validate Python modules
         run: |
           python - <<'PY'
@@ -57,10 +52,8 @@ jobs:
           except Exception as e:
               print('jugaad-data import warning:', repr(e))
           PY
-
       - name: Generate dashboard
         run: python run_daily.py
-
       - name: Verify dashboard output
         run: |
           test -s docs/index.html
@@ -68,39 +61,26 @@ jobs:
           test -n "$DATA_FILE"
           test -s "$DATA_FILE"
           echo "Dashboard output verified: $DATA_FILE"
-
       - name: Apply quality and risk layer
         run: python quality_report.py
-
       - name: Run technical historical research
         run: python backtest_report.py
-
       - name: Generate Nifty & F&O research page
         run: python research_engine.py
-
       - name: Add intraday ORB and options analytics
         run: python research_v2.py
-
       - name: Generate daily global and Indian market news
         run: python news_feed.py
-
       - name: Integrate news and research links into dashboard
         run: python integrate_news.py
-
       - name: Archive timestamped dashboard, research and news
         run: |
           mkdir -p docs
           STAMP_IST=$(TZ=Asia/Kolkata date +%Y-%m-%d-%H-%M)
           cp docs/index.html "docs/${STAMP_IST}.html"
           if [ -s docs/research.html ]; then cp docs/research.html "docs/research-${STAMP_IST}.html"; fi
-          if [ -s docs/news.html ]; then
-            cp docs/news.html "docs/news-${STAMP_IST}.html"
-          else
-            echo 'news.html was not generated; continuing with dashboard archive'
-          fi
+          if [ -s docs/news.html ]; then cp docs/news.html "docs/news-${STAMP_IST}.html"; else echo 'news.html was not generated; continuing with dashboard archive'; fi
           echo "Archived dashboard: docs/${STAMP_IST}.html"
-          find docs -maxdepth 1 -type f -printf '%f %s bytes\n' | sort | tail -35
-
       - name: Show generation summary
         if: always()
         run: |
@@ -108,20 +88,12 @@ jobs:
           test -s docs/research.html && echo 'Research generated: docs/research.html' || echo 'Research NOT generated'
           test -s docs/news.html && echo 'News generated: docs/news.html' || echo 'News NOT generated'
           test -s docs/backtest-latest.json && echo 'Backtest generated' || echo 'Backtest NOT generated'
-          find docs -maxdepth 1 -type f -printf '%f %s bytes\n' | sort | tail -35
-
       - name: Commit generated dashboards and research data
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
           git add -A docs/
-          if git diff --cached --quiet; then
-            echo 'No generated-file changes to commit.'
-          else
-            git commit -m "Update daily radar, research and market news"
-            git push
-          fi
-
+          if git diff --cached --quiet; then echo 'No generated-file changes to commit.'; else git commit -m "Update daily radar, research and market news"; git push; fi
       - name: Upload dashboard artifact
         uses: actions/upload-artifact@v4
         with:
@@ -129,19 +101,16 @@ jobs:
           path: docs/
           if-no-files-found: error
           retention-days: 14
-
       - name: Configure Pages
         id: pages
         continue-on-error: true
         uses: actions/configure-pages@v5
-
       - name: Upload Pages artifact
         if: steps.pages.outcome == 'success'
         continue-on-error: true
         uses: actions/upload-pages-artifact@v4
         with:
           path: './docs'
-
       - name: Deploy Pages
         if: steps.pages.outcome == 'success'
         continue-on-error: true
