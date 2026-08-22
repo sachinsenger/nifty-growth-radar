@@ -80,28 +80,6 @@
       "macro": true
     },
     {
-      "query": "India markets",
-      "title": "Markets post second consecutive weekly decline; rupee depreciates further - Moneycontrol.com",
-      "link": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxPT1FaWlFvMWdDeFZ5b1VxY3BvNFM0WVc2UTBxVjVYVnZCTkg1eDQ1RWZTMnNmcWcydVlXczV5MzlqbVdNYUZRa1YwZnhwLW1DQmM4azRIRzdBWE9GZnNuVERWY3hGbFZsSS0tZUlTZEdjSnBzTUV0TDk5U21uV0wwWXl6ejNxYU9kWFV0RktaOC11S3E2bVFRUnFMQ00wak0wOUgxY096VnFKQXVGOHFkUmtNVGZINHE3S002b0VqVkl3VWxtMzV5bHRwVC0yYnRwX3EydlVhS1pjQURf0gHiAUFVX3lxTE11ZktaVFVQMTlJejczdFotOExwcmEyRFpyemx1UFRlbnB5M08wNjQzQ2EyaER1c3ZtNThfQk1FcEk0WVVXNzAxUjgyd3pZZG9lTW8wX2hyQmUtalNmUWpUMnVRdWNVaVlfcXhUbFhXQXRqQ2YyYkNsUGdldkZHMzV0U0tFeFY5T3ZGVm9LV1FRSHM5UXJGZkczakZkRnFiMkhBaU9KUDE1SThrdmFNRGVBbW1vQXdvRDJWaGgzU3VyMUNZX0YzcVJKclhwWURKUVVManhxSGc0NVpkMzFYQnFPVmc?oc=5",
-      "description": "Markets post second consecutive weekly decline; rupee depreciates further &nbsp;&nbsp; Moneycontrol.com",
-      "published": "Sat, 22 Aug 2026 06:50:58 GMT",
-      "source": "Moneycontrol.com",
-      "stocks": [],
-      "sectors": [
-        "India markets"
-      ],
-      "affected": [
-        "India markets"
-      ],
-      "tone": "Mixed/Neutral",
-      "impact": "High",
-      "watch": [
-        "India markets"
-      ],
-      "derived_stocks": [],
-      "macro": true
-    },
-    {
       "query": "RBI rates inflation",
       "title": "RBI keeps repo rate unchanged; Projects India\u2019s real GDP growth for current fiscal at 6.9% | Akashvani News - News On AIR",
       "link": "https://news.google.com/rss/articles/CBMivgFBVV95cUxOTGFSNzg0VzlJdnMwYWh2TzliX3libXhnd0pFajdsbW05R3dZU3Y5V3BjRU5uV2Q0aDVOZWZNX3dDdHpvNXpGOXRTQlNnQVRScklzNU5QdjVmV2YzOWlFVWZXMXFSZWxscFJIdFY0UHhleHZreWhkRmhqNGpCeTBYTVlpZ3AxcFN5X0h6SkFqSHJzSTBhWER6N1lkQXB3cnlLRXU4TF95ZjNWdC01XzBkTm0zOGN3RmpXc1lQSkdR?oc=5",
@@ -668,6 +646,40 @@
     },
     {
       "query": "Crude geopolitics",
+      "title": "Oil rises as Trump threatens sanctions on Iran partners - Reuters",
+      "link": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPbEh1QVJmcTNtSE1PMURxNmRBT3RIWHhVTmtwZDRiMk5yUzJtc2xuNHFlQXF1a3VJS3FQckxIY3Y2VjhFejlkNDZnLTY0R0prazZHb194Y19sRDdjUVJtNHlMT0lwSHRRcU5UM2VBTFZpVHBDZEl1OGFWbUkxX1pacWhMYUtFQ0pRbGVRYVNYcy1zSUNZVWtxNW4zczc0YVhZVkFWUHJwRWlFQl8zQUR3dFNIU1o?oc=5",
+      "description": "Oil rises as Trump threatens sanctions on Iran partners &nbsp;&nbsp; Reuters",
+      "published": "Fri, 21 Aug 2026 23:26:38 GMT",
+      "source": "Reuters",
+      "stocks": [],
+      "sectors": [
+        "Energy"
+      ],
+      "affected": [
+        "Energy"
+      ],
+      "tone": "Negative",
+      "impact": "Medium",
+      "watch": [
+        "RELIANCE",
+        "ONGC",
+        "BPCL",
+        "NTPC",
+        "POWERGRID",
+        "TATAPOWER"
+      ],
+      "derived_stocks": [
+        "RELIANCE",
+        "ONGC",
+        "BPCL",
+        "NTPC",
+        "POWERGRID",
+        "TATAPOWER"
+      ],
+      "macro": false
+    },
+    {
+      "query": "Crude geopolitics",
       "title": "Goldman Sachs Flags Demand Weakness as Key Risk to Oil Price Outlook - EnergyNow",
       "link": "https://news.google.com/rss/articles/CBMinwFBVV95cUxQT294UnVBZFFvMU52MWZSOFRxNWlINURUaWpfZXBMY1MzSGU1YmJRd2R4TDNqSE80S0pXZHc0WmRZUFB4N3Iwdk1FRWRxdlNhY09vLWNNOHVsdkhyNVNqaDlINE1zSXpOOTEyTzlyV0NwTW15UHUtMmJHN3FVSW10bDFSbnRQaXEwUms5SlpTVjVYRmFfSnpBSGt6a0Z2VHM?oc=5",
       "description": "Goldman Sachs Flags Demand Weakness as Key Risk to Oil Price Outlook &nbsp;&nbsp; EnergyNow",
@@ -698,28 +710,6 @@
         "POWERGRID",
         "TATAPOWER"
       ],
-      "macro": false
-    },
-    {
-      "query": "Global markets",
-      "title": "US stocks: US market rises on the day but falls for the week; bond yields and Iran in focus - The Economic Times",
-      "link": "https://news.google.com/rss/articles/CBMi-gFBVV95cUxQYnNPWmZSZUtUTF9FSy1TWFl3amp6UTZvMlBFVXR1RFRUbF9hVktkMXJKanhNWTEzTXc2T3VId1lPbWNIVDh5SVE5VGQxQWV3SllSV3dIemJ0bmlvRGJZV0pjZUU2UXktUl92Rkw1YWlKaGJXaDQ0S1BfX2NzRWRtczh4TFpyVlVlRW8wcm1nbC1Oa0JlZ2xkUTMtd3pvOVc3S0lJU2xZeUhHREQ0VGtCNjhNUGc3VUtwdEp3RjgwZkZ1aXcwckV1TlhjSDVISndqVGw3akt0cEM2akgwakN2NHpqcC1XSkVKa003a2ZQc0FBZlVzYW1LYzNR0gH_AUFVX3lxTE5DTVhjM0FfWXBpbmd0ajE4aEtrWlNmTGJ5eDdqMDRHUGplc2VjOUJ5MzBJdURwYzdiQ3RVeU16ckR4MHVEOXRTUGprZ0tjT2piRW12bFg0UnlLaVZTYmNDLVdZYW9TTzZCZmlTRW5raFhSUjBXMGZ2aUgxeXo3ZHFib0dpZTk2TDllWEdpdVJZYk1nN1paWkYwZjE5TUFULUhiRFhSbHpKcWx2VFM4U2ZOS2Y0Sk5SZzI4ZHA0amdwWHVIQnJxdmtBYklXUUkzWEYyRXR0c3BFU0JRWGUtU0pZSzQ0NVhIWmtFSDBBRDl4czBHa1hKTEx5dHA1aUlrYw?oc=5",
-      "description": "US stocks: US market rises on the day but falls for the week; bond yields and Iran in focus &nbsp;&nbsp; The Economic Times",
-      "published": "Fri, 21 Aug 2026 20:09:51 GMT",
-      "source": "The Economic Times",
-      "stocks": [],
-      "sectors": [
-        "Global markets"
-      ],
-      "affected": [
-        "Global markets"
-      ],
-      "tone": "Negative",
-      "impact": "Medium",
-      "watch": [
-        "Global markets"
-      ],
-      "derived_stocks": [],
       "macro": false
     },
     {
@@ -812,28 +802,6 @@
     },
     {
       "query": "India markets",
-      "title": "Opinion | Rs 1.05 Lakh Crore Lost: Inside The Dangerous Rise Of India's Gen Z Stock Traders - NDTV",
-      "link": "https://news.google.com/rss/articles/CBMiswFBVV95cUxQU1hJZHRTZ09wcUJaVlVwaFQ5ejZYSktsdG1meGQ2SGNVR0RsWDBmNHU0TDRSQlNIQUxMUzV0TVVIT1V5YTB0OW9TU1paRXdWVk03dGRIRktzNVgtemNGamFBelFfX3FvMnNUc2NrSXlhZGt5MDhjVmJuaThWX00wTWROcnF5RTVrMlFHVnFBUzUxdk9UQjM5QnJmTXhueXhmemZKdXMyOC0tVF9WRVlHNGhBSQ?oc=5",
-      "description": "Opinion | Rs 1.05 Lakh Crore Lost: Inside The Dangerous Rise Of India's Gen Z Stock Traders &nbsp;&nbsp; NDTV",
-      "published": "Sat, 22 Aug 2026 08:24:10 GMT",
-      "source": "NDTV",
-      "stocks": [],
-      "sectors": [
-        "India markets"
-      ],
-      "affected": [
-        "India markets"
-      ],
-      "tone": "Mixed/Neutral",
-      "impact": "Medium",
-      "watch": [
-        "India markets"
-      ],
-      "derived_stocks": [],
-      "macro": false
-    },
-    {
-      "query": "India markets",
       "title": "Top 29 High-Priced Stocks To Invest In India In August 2026 - Samco",
       "link": "https://news.google.com/rss/articles/CBMif0FVX3lxTE5KeWpPZ3lTMFN3bzNmc3U1SjBmd2dfMzhFODlfYS1XaTFTQnpHQkxqVnFHWWVZd1NMVzJpX01oYTFvTU10YU9ORWNrbHYzN0JrYkc2NkgydGJhYXptOFU0M2t5UElyRVM2cGpTVGlHbHNONXQ3VUVzNmNuQmlscVU?oc=5",
       "description": "Top 29 High-Priced Stocks To Invest In India In August 2026 &nbsp;&nbsp; Samco",
@@ -856,24 +824,36 @@
     },
     {
       "query": "India markets",
-      "title": "Nifty IT Live | NSE Nifty IT Index Today - S&P CNX Nifty IT - The Economic Times",
-      "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTFBnS091SmlIQ0NWMXJ5SmhrR2p5aDY4cUxtSlhJZ3hseVlNNGQyYXlOQnFoTXZEa2lpZGdPQXM0WFJ3Q01vTUNzWmcxcFN3WXhua0p5NXpfM0RHY3V1eFNyLUIxYVRLQzY5R0Z6UUFVZ1c?oc=5",
-      "description": "Nifty IT Live | NSE Nifty IT Index Today - S&P CNX Nifty IT &nbsp;&nbsp; The Economic Times",
-      "published": "Sat, 22 Aug 2026 03:09:55 GMT",
+      "title": "Nifty Bank Live | NSE Nifty Bank Index Today - S&P CNX Nifty Bank - The Economic Times",
+      "link": "https://news.google.com/rss/articles/CBMic0FVX3lxTE1UWDgzbm9jRDVIMnYwdGNtY3NVVjdsSFhob2hXLVl1dDItVHp6SFBaaGY5M2NVeGszYm44bVVPTWc4bXF5dDU2eEJReGNuNUxiZ1ZLeTNBT1V1cEpiMEt3VjhJU0lsTE40Qm4yLUlEOWF2Rm8?oc=5",
+      "description": "Nifty Bank Live | NSE Nifty Bank Index Today - S&P CNX Nifty Bank &nbsp;&nbsp; The Economic Times",
+      "published": "Sat, 22 Aug 2026 05:47:20 GMT",
       "source": "The Economic Times",
       "stocks": [],
       "sectors": [
-        "India markets"
+        "Financials"
       ],
       "affected": [
-        "India markets"
+        "Financials"
       ],
       "tone": "Mixed/Neutral",
       "impact": "Medium",
       "watch": [
-        "India markets"
+        "HDFCBANK",
+        "ICICIBANK",
+        "SBIN",
+        "AXISBANK",
+        "KOTAKBANK",
+        "BAJFINANCE"
       ],
-      "derived_stocks": [],
+      "derived_stocks": [
+        "HDFCBANK",
+        "ICICIBANK",
+        "SBIN",
+        "AXISBANK",
+        "KOTAKBANK",
+        "BAJFINANCE"
+      ],
       "macro": false
     },
     {
@@ -905,6 +885,62 @@
       "description": "India stocks lag global markets in 2026: BofA data shows 9.1% decline in USD terms &nbsp;&nbsp; Business Today",
       "published": "Sat, 22 Aug 2026 17:55:02 GMT",
       "source": "Business Today",
+      "stocks": [],
+      "sectors": [
+        "India markets"
+      ],
+      "affected": [
+        "India markets"
+      ],
+      "tone": "Mixed/Neutral",
+      "impact": "Medium",
+      "watch": [
+        "India markets"
+      ],
+      "derived_stocks": [],
+      "macro": false
+    },
+    {
+      "query": "India markets",
+      "title": "West Asia tensions cloud market outlook, Nifty may stay rangebound - IndiaIPO",
+      "link": "https://news.google.com/rss/articles/CBMiowFBVV95cUxObDhNNHlwZUdxQjNpR3Y4MlU4eGhzcXptQm9ZaDVsbTByY1RUV3pqQTVyek9DbEIxZXNBM2NhZ044elNMaWpRS2swaFpfWFlmVW5iUFE4RnRYV18tZkdLYmgwSFdLay1Ib3ZYUTRNU1I2OHRZcjRfUzk1alhxbXExTlNfa1ViNGV6bmN3d3F1aS1TaXA5cDJIcmFHZjNTMzdtam9r?oc=5",
+      "description": "West Asia tensions cloud market outlook, Nifty may stay rangebound &nbsp;&nbsp; IndiaIPO",
+      "published": "Sat, 22 Aug 2026 03:07:50 GMT",
+      "source": "IndiaIPO",
+      "stocks": [],
+      "sectors": [
+        "IT"
+      ],
+      "affected": [
+        "IT"
+      ],
+      "tone": "Mixed/Neutral",
+      "impact": "Medium",
+      "watch": [
+        "TCS",
+        "INFY",
+        "HCLTECH",
+        "WIPRO",
+        "COFORGE",
+        "PERSISTENT"
+      ],
+      "derived_stocks": [
+        "TCS",
+        "INFY",
+        "HCLTECH",
+        "WIPRO",
+        "COFORGE",
+        "PERSISTENT"
+      ],
+      "macro": false
+    },
+    {
+      "query": "India markets",
+      "title": "Why ethanol diversion is not to blame for soaring sugar prices - The Indian Express",
+      "link": "https://news.google.com/rss/articles/CBMizgFBVV95cUxQTi1MN0owR0tqMHhrdFlGLUc5YTBFZi03cWl2UUZUNFFWQ1ZrNGJrcTRDcGZYT1dtU0Z3a1JfSXc0ME5DaGtCdHRJWnRHNUdRMzZUNV8xUnVhN2JEYXN1UFJkX3ZpdXU5b2dweW5zSjl3Yk9pbkZJYXFtQjBVNTRLLXNGLTJxdXRraERsZWpmYmFRTC1XVWNSZWdYVlVjN0NNOXcwWm1qRGQwb2pTRnpKRFZ5YjQ0REtxX2pvUzJHWXlaOG45M01FcGo0Ukt4QdIB1AFBVV95cUxPU3V5NE51VWxkR2tIT2t6eDZuaC1jRTQyRzdQQnZPSWpfTVRVWWNGcV9pUC1BNHQ5UWtLcUdoYWkyRG9pZnZLT2ZRb3BLRUlWdVhMaTFXVW0tTjNwVFk2aFhjWXo2V05acjNPeGEtRnJaUzVfMnJZOFk5UTNlcGdyQnhINS13R0RkWjhCb0dfMWEwVWlmYUFxT3g5YnM4YWxodXBEYWdqbmFpWXpfTDVVSE9jbkhDQU9fOXdzdS1aU2lkaEE1MnNMM21OaDI2YkdBV2tJcQ?oc=5",
+      "description": "Why ethanol diversion is not to blame for soaring sugar prices &nbsp;&nbsp; The Indian Express",
+      "published": "Sat, 22 Aug 2026 00:30:17 GMT",
+      "source": "The Indian Express",
       "stocks": [],
       "sectors": [
         "India markets"
@@ -998,28 +1034,6 @@
         "COFORGE",
         "PERSISTENT"
       ],
-      "macro": true
-    },
-    {
-      "query": "India markets",
-      "title": "Markets post second consecutive weekly decline; rupee depreciates further - Moneycontrol.com",
-      "link": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxPT1FaWlFvMWdDeFZ5b1VxY3BvNFM0WVc2UTBxVjVYVnZCTkg1eDQ1RWZTMnNmcWcydVlXczV5MzlqbVdNYUZRa1YwZnhwLW1DQmM4azRIRzdBWE9GZnNuVERWY3hGbFZsSS0tZUlTZEdjSnBzTUV0TDk5U21uV0wwWXl6ejNxYU9kWFV0RktaOC11S3E2bVFRUnFMQ00wak0wOUgxY096VnFKQXVGOHFkUmtNVGZINHE3S002b0VqVkl3VWxtMzV5bHRwVC0yYnRwX3EydlVhS1pjQURf0gHiAUFVX3lxTE11ZktaVFVQMTlJejczdFotOExwcmEyRFpyemx1UFRlbnB5M08wNjQzQ2EyaER1c3ZtNThfQk1FcEk0WVVXNzAxUjgyd3pZZG9lTW8wX2hyQmUtalNmUWpUMnVRdWNVaVlfcXhUbFhXQXRqQ2YyYkNsUGdldkZHMzV0U0tFeFY5T3ZGVm9LV1FRSHM5UXJGZkczakZkRnFiMkhBaU9KUDE1SThrdmFNRGVBbW1vQXdvRDJWaGgzU3VyMUNZX0YzcVJKclhwWURKUVVManhxSGc0NVpkMzFYQnFPVmc?oc=5",
-      "description": "Markets post second consecutive weekly decline; rupee depreciates further &nbsp;&nbsp; Moneycontrol.com",
-      "published": "Sat, 22 Aug 2026 06:50:58 GMT",
-      "source": "Moneycontrol.com",
-      "stocks": [],
-      "sectors": [
-        "India markets"
-      ],
-      "affected": [
-        "India markets"
-      ],
-      "tone": "Mixed/Neutral",
-      "impact": "High",
-      "watch": [
-        "India markets"
-      ],
-      "derived_stocks": [],
       "macro": true
     },
     {
@@ -1591,23 +1605,23 @@
   "sectors": [
     [
       "IT",
-      9
-    ],
-    [
-      "India markets",
-      7
+      10
     ],
     [
       "Financials",
-      7
+      8
     ],
     [
       "Energy",
-      6
+      7
+    ],
+    [
+      "India markets",
+      5
     ],
     [
       "Global markets",
-      4
+      3
     ],
     [
       "Auto",
