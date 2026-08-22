@@ -76,6 +76,9 @@ jobs:
       - name: Generate Nifty & F&O research page
         run: python research_engine.py
 
+      - name: Add intraday ORB and options analytics
+        run: python research_v2.py
+
       - name: Generate daily global and Indian market news
         run: python news_feed.py
 
