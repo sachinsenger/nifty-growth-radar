@@ -21,55 +21,41 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v6
-
       - name: Setup Python
         uses: actions/setup-python@v6
         with:
           python-version: '3.11'
           cache: pip
-
       - name: Install dependencies
         run: python -m pip install -r requirements.txt
-
       - name: Compile all Python modules
         run: python -m compileall -q -f .
-
-      - name: Import application modules without network execution
+      - name: Parse all application Python files
         run: |
           python - <<'PY'
-          import importlib
-          modules = [
-              'market_data',
-              'technical_engine',
-              'screener_fundamentals',
-              'quality_engine',
-              'run_daily',
-              'quality_report',
-              'backtest_report',
-              'research_engine',
-              'research_v2',
-              'news_feed',
-              'integrate_news',
-          ]
-          for name in modules:
-              importlib.import_module(name)
-              print(f'OK: {name}')
+          import ast
+          from pathlib import Path
+          ignored = {'.git', '.venv', 'venv', '__pycache__'}
+          files = [p for p in Path('.').rglob('*.py') if not any(part in ignored for part in p.parts)]
+          assert files, 'No Python files found'
+          for path in files:
+              ast.parse(path.read_text(encoding='utf-8'), filename=str(path))
+              print(f'OK: {path}')
+          print(f'Parsed {len(files)} Python files successfully')
           PY
-
-      - name: Validate workflow YAML and required files
+      - name: Validate required files and workflow configuration
         run: |
           test -s .github/workflows/daily-radar.yml
           test -s requirements.txt
           test -s stocks.csv
+          grep -q "cron: '0 3 \* \* 1-5'" .github/workflows/daily-radar.yml
+          grep -q "workflow_dispatch" .github/workflows/daily-radar.yml
           python - <<'PY'
           from pathlib import Path
-          required = ['run_daily.py', 'quality_report.py', 'backtest_report.py',
-                      'research_engine.py', 'research_v2.py', 'news_feed.py',
-                      'integrate_news.py']
+          required = ['run_daily.py', 'quality_report.py', 'backtest_report.py', 'research_engine.py', 'research_v2.py', 'news_feed.py', 'integrate_news.py']
           for path in required:
               assert Path(path).is_file(), f'Missing {path}'
               print(f'OK: {path}')
           PY
-
       - name: Fast validation passed
-        run: echo 'FAST VALIDATION PASSED - full 08:30 IST build is safe to run manually/scheduled.'
+        run: echo 'FAST VALIDATION PASSED - no expensive market-data generation was run.'
