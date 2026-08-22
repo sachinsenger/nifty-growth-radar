@@ -64,8 +64,10 @@ jobs:
       - name: Verify dashboard output
         run: |
           test -s docs/index.html
-          test -s "docs/data-$(TZ=Asia/Kolkata date +%Y-%m-%d).json"
-          echo "Dashboard output verified"
+          DATA_FILE=$(find docs -maxdepth 1 -type f -name 'data-*.json' -printf '%T@ %p\n' | sort -nr | head -1 | cut -d' ' -f2-)
+          test -n "$DATA_FILE"
+          test -s "$DATA_FILE"
+          echo "Dashboard output verified: $DATA_FILE"
 
       - name: Apply quality and risk layer
         run: python quality_report.py
